@@ -1,1 +1,30 @@
 // dont forget to style current page nav item as blue
+//fontstyle ($fontSize, $fontFamily, $fontLineHeight, $fontLetterSpacing, $fontWeight)
+
+header{
+    nav{
+        display:flex;
+        flex-direction: row;
+        justify-content: space-between;
+        align-items: center;
+        h2{
+            @include fontstyle(1.73rem, $fontFancy,inherit,inherit,700);
+            text-transform: uppercase;
+            color:$colorGreenishCyan;
+        }
+        ul{
+            display:flex;
+            flex-direction: row;
+
+            li{
+                @include fontstyle(inherit,$fontBase,29px,1px,900);
+                text-transform: uppercase;
+                color: $colorIceBlue;
+                margin:25px;
+            }
+            .currentPage{
+                color:$colorGreenishCyan;
+            }
+        }
+    }
+}
