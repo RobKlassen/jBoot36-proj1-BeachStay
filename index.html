@@ -4,45 +4,60 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://kit.fontawesome.com/fd2248e09b.js" crossorigin="anonymous"></script>
     <link rel="stylesheet" href="styles/style.css">
-    <title>Home</title>
+    <title>Index [[[RENAME THIS]]]</title>
 </head>
 <body>
 
-<header>
+<header class="mainPageHeader">
     <div class="wrapper">
         <nav>
             <h2>Beachstays</h2>
             <ul>
-                <li class="currentPage">Home</li>
+                <li class="currentPage"><a href="index.html">Home</a></li>
                 <li>About</li>
-                <li>Blog</li>
-                <li>Contact</li>
+                <li><a href="./blog.html">Blog</a></li>
+                <li><a href="./contact.html">Contact</a></li>
             </ul>
         </nav>
     </div>
+    <div class="headerContainer">
         <h1>welcome to <span>Beachstays</span></h1>
-        <img src="./styles/assets/header-box.jpg" alt="">      
+
+        <img src="./styles/assets/header-box.jpg" alt="">
+        <!-- <div class="box"></div> -->
+    </div>      
 </header>
 
 <main>
 <!-- visit guyana -->
     <section>
         <div class="wrapper">
-            <h3>Visut Guyana</h3>
-            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla pulvinar tortor nulla elementum eleifend. Vestibulum consequat vestibulum felis pharetra luctus. Quisque interdum orci quis convallis dapibus nulla pulvinar tortor. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla pulvinar tortor nulla elementum eleifend. Vestibulum consequat vestibulum felis pharetra luctus. Quisque interdum orci quis convallis.</p>
-            <a>Find Out More</a>
-            <img src="./styles/assets/small-box.jpg" alt="">
+            <div class="mainVisitBox">
+                <div class="mainVisitText">
+                    <h3>Visut Guyana</h3>
+                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla pulvinar tortor nulla elementum eleifend. Vestibulum consequat vestibulum felis pharetra luctus. Quisque interdum orci quis convallis dapibus nulla pulvinar tortor.Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla pulvinar tortor nulla elementum eleifend. Vestibulum consequat vestibulum felis pharetra luctus. Quisque interdum orci quis convallis.</p>
+                    <a href="" class="actionButton">Find Out More</a>
+                </div>
+                <div class="mainVisitImg">
+                    <img src="./styles/assets/small-box.jpg" alt="">
+                </div>
+            </div>
 
         </div>
     </section>
 
 <!--  gallery-->
     <section>
-        <div class="wrapper">
-            <div class="galleryContainer">
+        <div class="galleryContainer">
+            <div class="mainGalImgBox">
                 <img src="./styles/assets/gallery-image1.jpg" alt="">
+            </div>
+            <div class="mainGalImgBox mainGalImg2">
                 <img src="./styles/assets/gallery-image2.jpg" alt="">
+            </div>
+            <div class="mainGalImgBox">
                 <img src="./styles/assets/gallery-image3.jpg" alt="">
             </div>
         </div>
@@ -50,22 +65,46 @@
 
 <!-- articles-->
     <section>
-        <div class="wrapper">
+        <div class="wrapper"></div>
             <div class="forwards">
                 <article>
-                    <h3>Beach House</h3>
+                    <div class="mainArticleTitle">
+                        <i class="fas fa-home"></i>
+                        <h3>Beach House</h3>
+                    </div>
                     <p>Ut felis eros, vehicula eu magna nec, laoreet blandit nisi. Fusce auctor erat ac sagittis mattis. Mauris tempus velit sem, sit amet imperdiet dolor placerat. </p>
                 </article>
                 <article>
-                    <h3>Community</h3>
+                    <div class="mainArticleTitle">
+                        <i class="fas fa-users"></i>
+                        <h3>Community</h3>
+                    </div>
                     <p>Ut felis eros, vehicula eu magna nec, laoreet blandit nisi. Fusce auctor erat ac sagittis mattis. Mauris tempus velit sem, sit amet imperdiet dolor placerat. </p>
                 </article>
                 <article>
-                    <h3>Blog</h3>
+                    <div class="mainArticleTitle">
+
+
+
+
+                        <span class="fa-stack fa-4x">
+                            <i class="fas fa-circle fa-stack-2x iconBackground"></i>
+                            <i class="fas fa-file fa-stack-1x"></i>
+                        </span>
+                        
+                        
+                        
+                        
+                        
+                        <h3>Blog</h3>
+                    </div>
                     <p>Ut felis eros, vehicula eu magna nec, laoreet blandit nisi. Fusce auctor erat ac sagittis mattis. Mauris tempus velit sem, sit amet imperdiet dolor placerat.</p>
                 </article>
                 <article>
-                    <h3>Get in Touch</h3>
+                    <div class="mainArticleTitle">
+                        <i class="fas fa-phone"></i>
+                        <h3>Get in Touch</h3>
+                    </div>
                     <p>Ut felis eros, vehicula eu magna nec, laoreet blandit nisi. Fusce auctor erat ac sagittis mattis. Mauris tempus velit sem, sit amet imperdiet dolor placerat. </p>
                 </article>
             </div>

@@ -48,19 +48,18 @@
 
 //XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX
 
-
+// @mixin fontstyle ($fontSize, $fontFamily, $fontLineHeight, $fontLetterSpacing, $fontWeight){
 
 body{
     width:100%;
     max-width: 1600px;
     margin:0 auto;
-    background-color:black;
+    background-color:$colorIceBlue;
 }
 
 .wrapper{
     width:80%;
     margin:0 auto;
-
 }
 
 ul{
@@ -69,3 +68,32 @@ ul{
     list-style: none;
 }
 
+a{
+    text-decoration: none;
+    color:inherit;
+}
+
+
+h3{
+    color:$colorSpruce;
+    @include fontstyle(35px, $fontBase, 58px, 3.8px, 700);
+    margin-bottom:1rem;
+}
+
+p{
+    color:$colorBlack;
+    @include fontstyle(1rem, $fontBase, 32px, 2px, 300);
+}
+
+section{
+    margin-bottom: 4rem;
+}
+
+.actionButton{
+    display:inline-block;
+    @include fontstyle(1rem, $fontFancy, 29px, 1px, 900);
+    color: $colorIceBlue;
+    background-color: $colorTwilightBlue;
+    padding: 8px 14px;
+    margin:10px 0;
+}

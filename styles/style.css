@@ -238,17 +238,23 @@ html {
 }
 
 /*--------END SETUP--------*/
+* {
+  margin: 0;
+  padding: 0;
+}
+
 html {
   padding: 0;
   margin: 0;
   font-size: 120%;
+  background-color: white;
 }
 
 body {
   width: 100%;
   max-width: 1600px;
   margin: 0 auto;
-  background-color: black;
+  background-color: #FAFFFE;
 }
 
 .wrapper {
@@ -262,8 +268,108 @@ ul {
   list-style: none;
 }
 
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+h3 {
+  color: #0C5f4C;
+  font-size: 35px;
+  font-family: "Lato", "sans-serif";
+  line-height: 58px;
+  letter-spacing: 3.8px;
+  font-weight: 700;
+  margin-bottom: 1rem;
+}
+
+p {
+  color: #232323;
+  font-size: 1rem;
+  font-family: "Lato", "sans-serif";
+  line-height: 32px;
+  letter-spacing: 2px;
+  font-weight: 300;
+}
+
+section {
+  margin-bottom: 4rem;
+}
+
+.actionButton {
+  display: inline-block;
+  font-size: 1rem;
+  font-family: "Playfair Display SC", serif;
+  line-height: 29px;
+  letter-spacing: 1px;
+  font-weight: 900;
+  color: #FAFFFE;
+  background-color: #063974;
+  padding: 8px 14px;
+  margin: 10px 0;
+}
+
+header {
+  background-repeat: no-repeat;
+  background-size: auto;
+  background-position: top center;
+  height: 90vh;
+  max-height: 840px;
+  min-height: 600px;
+  margin-bottom: 7rem;
+}
 header h1 {
-  color: #50E3C2;
+  font-size: 62px;
+  font-family: "Lato", "sans-serif";
+  line-height: inherit;
+  letter-spacing: 6.7px;
+  font-weight: 700;
+  color: #0C5f4C;
+}
+header h1 span {
+  display: block;
+  font-size: 111.2px;
+  font-family: "Playfair Display SC", serif;
+  line-height: inherit;
+  letter-spacing: inherit;
+  font-weight: 900;
+  color: #063974;
+  text-transform: uppercase;
+}
+
+.mainPageHeader {
+  background-image: url(./assets/home-image-1.jpg);
+}
+.mainPageHeader .headerContainer {
+  position: relative;
+  width: 100%;
+  height: 100%;
+}
+.mainPageHeader .headerContainer img {
+  width: 40%;
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  z-index: 0;
+}
+.mainPageHeader h1 {
+  display: inline-block;
+  position: absolute;
+  right: 15.5%;
+  bottom: 36%;
+  z-index: 10;
+}
+.mainPageHeader h1 span {
+  position: relative;
+  right: 3%;
+}
+
+.blogPageHeader {
+  background-image: url(./assets/blog-image-1.jpg);
+}
+
+.contactPageHeader {
+  background-image: url(./assets/contact-image-1.jpg);
 }
 
 header nav {
@@ -311,4 +417,86 @@ header nav ul li {
 }
 header nav ul .currentPage {
   color: #50E3C2;
+}
+
+.mainVisitBox {
+  height: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+.mainVisitBox .mainVisitText {
+  width: 61%;
+}
+.mainVisitBox .mainVisitImg {
+  width: 25%;
+}
+.mainVisitBox .mainVisitImg img {
+  -webkit-box-shadow: -1rem 1rem #50E3C2;
+          box-shadow: -1rem 1rem #50E3C2;
+}
+
+.galleryContainer {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  background-color: #D2F9F1;
+  padding: 5% 10%;
+}
+.galleryContainer .mainGalImgBox {
+  width: calc(100%/3);
+}
+.galleryContainer .mainGalImgBox img {
+  width: 100%;
+  height: 100%;
+}
+.galleryContainer .mainGalImg2 {
+  margin: 0 2%;
+}
+
+.forwards {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+}
+.forwards article {
+  width: 50%;
+}
+.forwards article .mainArticleTitle {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+.forwards article .mainArticleTitle span {
+  color: #FAFFFE;
+  font-size: 30px;
+}
+.forwards article .mainArticleTitle .iconBackground {
+  color: #50E3C2;
+}
+.forwards article .mainArticleTitle h3 {
+  margin: 0;
 }

@@ -1,5 +1,57 @@
+// @mixin fontstyle ($fontSize, $fontFamily, $fontLineHeight, $fontLetterSpacing, $fontWeight){
+
 header{
+    background-repeat: no-repeat;
+    background-size: auto;
+    background-position: top center;
+    height:90vh;
+    max-height:840px;
+    min-height:600px;
+    margin-bottom:7rem;
+
     h1{
-        color:$colorGreenishCyan;
+        @include fontstyle(62px, $fontBase, inherit, 6.7px, 700);
+        color:$colorSpruce;
+        span{
+            display:block;
+            @include fontstyle(111.2px, $fontFancy, inherit, inherit, 900);
+            color: $colorTwilightBlue;
+            text-transform: uppercase;
+        }
     }
+}
+
+.mainPageHeader{
+    background-image: url(./assets/home-image-1.jpg);
+    .headerContainer{
+        position:relative;
+        width:100%;
+        height:100%;
+        img{
+            width:40%;
+            position:absolute;
+            left:0;
+            bottom:0;
+            z-index: 0;
+        }
+    }
+    h1{
+        display:inline-block;
+        position:absolute;
+        right: 15.5%;
+        bottom:36%;
+        z-index: 10;
+        span{
+            position:relative;
+            right:3%;
+        }
+    }
+}
+
+.blogPageHeader{
+    background-image: url(./assets/blog-image-1.jpg);
+}
+
+.contactPageHeader{
+    background-image: url(./assets/contact-image-1.jpg);
 }

@@ -1,0 +1,72 @@
+// @mixin fontstyle ($fontSize, $fontFamily, $fontLineHeight, $fontLetterSpacing, $fontWeight){
+
+.mainVisitBox{
+    height:100%;
+    display:flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+  
+    .mainVisitText{
+        width:61%;
+    }
+   
+    .mainVisitImg{
+        width:25%;
+      
+        img{
+            box-shadow: -1rem 1rem $colorGreenishCyan;
+        }
+    }
+}
+
+.galleryContainer{
+    display:flex;
+    flex-direction: row;
+    background-color: $colorLightLightBlue;
+    padding:5% 10%;
+
+    .mainGalImgBox{
+        width:calc(100%/3);
+
+        img{
+            width:100%;
+            height:100%;
+        }
+    }
+
+    .mainGalImg2{
+        margin:0 2%;
+    }
+}
+
+.forwards{
+    display:flex;
+    flex-wrap: wrap;
+    
+    article{
+        width:50%;
+
+        .mainArticleTitle{
+            display:flex;
+            flex-direction: row;
+            align-items: center;
+            span{
+                color:$colorIceBlue;
+                font-size:30px;
+            }
+            .iconBackground{
+                color:$colorGreenishCyan;
+            }
+            h3{
+                margin:0;
+            }
+        }
+    }
+}
+
+
+// <span class="fa-stack fa-4x">
+//   <i class="fa fa-circle fa-stack-2x icon-background"></i>
+//   <i class="fa fa-lock fa-stack-1x"></i>
+// </span>
