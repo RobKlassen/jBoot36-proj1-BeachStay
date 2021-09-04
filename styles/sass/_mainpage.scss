@@ -1,4 +1,5 @@
 // @mixin fontstyle ($fontSize, $fontFamily, $fontLineHeight, $fontLetterSpacing, $fontWeight){
+//@mixin boxshadow ($dropleft, $droptop){
 
 .mainVisitBox{
     height:100%;
@@ -13,9 +14,9 @@
    
     .mainVisitImg{
         width:25%;
-      
+    
         img{
-            box-shadow: -1rem 1rem $colorGreenishCyan;
+            @include boxshadow(-1rem, 1rem);
         }
     }
 }
@@ -46,24 +47,107 @@
     
     article{
         width:50%;
+        display:flex;
+        flex-direction: row;
+        margin-bottom:2rem;
 
-        .mainArticleTitle{
-            display:flex;
-            flex-direction: row;
-            align-items: center;
-            span{
-                color:$colorIceBlue;
-                font-size:30px;
-            }
-            .iconBackground{
+        span{
+            color:$colorIceBlue;
+            font-size:30px;
+            .fa-circle{
                 color:$colorGreenishCyan;
             }
+        }
+
+        .mainArticleText{
+            display:flex;
+            flex-direction: column;
+            width:90%;
+            padding-left:3%;
+            // align-items: flex-start;
             h3{
                 margin:0;
             }
         }
     }
 }
+
+.mainDiscoverContainer{
+    display:flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    background-color: $colorLightLightBlue;
+    
+    .mainDiscoverBox{
+        width:40%;
+        display:flex;
+        flex-direction: column;
+        justify-content: center;
+    }
+    .mainDiscoverText{
+        width:100%;
+    }
+    .mdText1{
+        padding-right:20%;
+    }
+    .mdText2{
+        display:flex;
+        flex-direction: column;
+        justify-content: flex-end;
+        align-items: flex-end;
+        padding-left:20%;
+
+        p{
+            text-align: end;
+        }
+    }
+    .mainDiscoverImg{
+        // width:50%;
+
+        img{
+            width:100%;
+            clip-path: inset(-1rem);
+            position: relative;
+            
+        }
+        .image1{
+            top:calc(-2rem - 8px);
+            @include boxshadow(2rem, 2rem);
+        }
+        .image2{
+            top:2rem;
+            @include boxshadow(-2rem, 2rem);
+        }
+    }
+}
+
+.mainBanner{
+    background-image: url(./assets/banner-image.jpg);
+    @include backgroundspecs(no-repeat, cover, top center, 57vh, 500px, 0px);
+    width:100%;
+}
+
+.freetripContainer{
+    display:flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    width:80%;
+    margin:0 auto;
+    p{
+        margin-bottom: 10px;
+    }
+}
+
+
+// fa-users / h3 is Community
+// fa-file / h3 is Blog
+// fa-phone / h3 is Get in Touch
+
+
+// h3::before{
+//     font-family: "Font Awesome 5 Free"; font-weight: 900; content: "\f0c0"
+// }
 
 
 // <span class="fa-stack fa-4x">

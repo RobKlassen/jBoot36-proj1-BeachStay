@@ -54,6 +54,7 @@ body{
     width:100%;
     max-width: 1600px;
     margin:0 auto;
+    padding: 0 auto;
     background-color:$colorIceBlue;
 }
 
@@ -73,20 +74,31 @@ a{
     color:inherit;
 }
 
-
-h3{
-    color:$colorSpruce;
+h3,
+h4{
     @include fontstyle(35px, $fontBase, 58px, 3.8px, 700);
     margin-bottom:1rem;
 }
 
+h3{
+    color:$colorSpruce;
+}
+
+h4{
+    color:$colorTwilightBlue;
+}
+
 p{
     color:$colorBlack;
-    @include fontstyle(1rem, $fontBase, 32px, 2px, 300);
+    @include fontstyle(1rem, $fontBase, 32px, 2px, 400);
 }
 
 section{
     margin-bottom: 4rem;
+}
+
+.noBotMargin{
+    margin-bottom: 0;
 }
 
 .actionButton{
@@ -97,3 +109,24 @@ section{
     padding: 8px 14px;
     margin:10px 0;
 }
+
+
+
+// .mainVisitImg,
+// .mainDiscoverImg{
+//     font-size: 1%;
+// }
+
+// .dropShadowRight{
+    // filter:drop-shadow(5em 5em $colorGreenishCyan);
+    // box-shadow: 1rem 1rem $colorGreenishCyan;
+    // box-shadow: 50em 50em $colorGreenishCyan;
+    // drop-shadow: 5% 5% $colorGreenishCyan;
+    
+// }
+// .dropShadowLeft{
+    // filter:drop-shadow(-5em 5em $colorGreenishCyan);
+    // box-shadow: -1rem 1rem $colorGreenishCyan;
+    // box-shadow: -50em 50em $colorGreenishCyan;
+    // box-shadow: -5% 5% $colorGreenishCyan;
+// }

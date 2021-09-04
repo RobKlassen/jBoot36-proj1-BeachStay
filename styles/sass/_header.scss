@@ -1,12 +1,7 @@
-// @mixin fontstyle ($fontSize, $fontFamily, $fontLineHeight, $fontLetterSpacing, $fontWeight){
+
 
 header{
-    background-repeat: no-repeat;
-    background-size: auto;
-    background-position: top center;
-    height:90vh;
-    max-height:840px;
-    min-height:600px;
+    @include backgroundspecs(no-repeat, auto, top center, 90vh, 840px, 600px);
     margin-bottom:7rem;
 
     h1{
@@ -48,8 +43,19 @@ header{
     }
 }
 
+// @mixin fontstyle ($fontSize, $fontFamily, $fontLineHeight, $fontLetterSpacing, $fontWeight){
+
 .blogPageHeader{
     background-image: url(./assets/blog-image-1.jpg);
+    h1{
+        @include fontstyle(87px, $fontBase, 58px, 6.7px, 700);
+        color:$colorIceBlue;
+        display:inline-block;
+        position:absolute;
+        left:8rem;
+        top:12rem;
+
+    }
 }
 
 .contactPageHeader{

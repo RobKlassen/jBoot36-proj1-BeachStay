@@ -5,3 +5,17 @@
     letter-spacing: $fontLetterSpacing;    
     font-weight: $fontWeight;
 }
+
+@mixin backgroundspecs ($brRepeat, $brSize, $brPos, $brHeight, $brMaxH, $brMinH){
+    background-repeat: $brRepeat;
+    background-size: $brSize;
+    background-position: $brPos;
+    height: $brHeight;
+    max-height: $brMaxH;
+    min-height: $brMinH;
+}
+
+@mixin boxshadow ($dropleft, $droptop){
+    // filter: drop-shadow($dropleft $droptop 0 $colorGreenishCyan);
+    box-shadow: $dropleft $droptop $colorGreenishCyan;
+}
