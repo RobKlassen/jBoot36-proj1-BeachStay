@@ -74,24 +74,36 @@ a{
     color:inherit;
 }
 
+h3{
+    color:$colorSpruce;
+}
+
 h3,
 h4{
     @include fontstyle(35px, $fontBase, 58px, 3.8px, 700);
     margin-bottom:1rem;
 }
 
-h3{
-    color:$colorSpruce;
-}
-
-h4{
+h4,
+h5{
     color:$colorTwilightBlue;
 }
 
-p{
+h5{
+    @include fontstyle(30px, $fontBase, 58px, 3.2px, 700);
+}
+
+p,
+.missionBox .missionText ul li a{
     color:$colorBlack;
     @include fontstyle(1rem, $fontBase, 32px, 2px, 400);
 }
+
+.blogMissionLink{
+    color:$colorSpruce;
+    @include fontstyle(1rem, $fontBase, 32px, 2px, 700);
+}
+
 
 section{
     margin-bottom: 4rem;

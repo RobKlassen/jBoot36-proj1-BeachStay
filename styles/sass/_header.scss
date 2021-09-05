@@ -51,9 +51,9 @@ header{
         @include fontstyle(87px, $fontBase, 58px, 6.7px, 700);
         color:$colorIceBlue;
         display:inline-block;
-        position:absolute;
-        left:8rem;
-        top:12rem;
+        position:relative;
+        left:10%;
+        top:8rem;
 
     }
 }

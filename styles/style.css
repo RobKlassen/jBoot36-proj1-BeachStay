@@ -274,6 +274,10 @@ a {
   color: inherit;
 }
 
+h3 {
+  color: #0C5f4C;
+}
+
 h3,
 h4 {
   font-size: 35px;
@@ -284,21 +288,36 @@ h4 {
   margin-bottom: 1rem;
 }
 
-h3 {
-  color: #0C5f4C;
-}
-
-h4 {
+h4,
+h5 {
   color: #063974;
 }
 
-p {
+h5 {
+  font-size: 30px;
+  font-family: "Lato", "sans-serif";
+  line-height: 58px;
+  letter-spacing: 3.2px;
+  font-weight: 700;
+}
+
+p,
+.missionBox .missionText ul li a {
   color: #232323;
   font-size: 1rem;
   font-family: "Lato", "sans-serif";
   line-height: 32px;
   letter-spacing: 2px;
   font-weight: 400;
+}
+
+.blogMissionLink {
+  color: #0C5f4C;
+  font-size: 1rem;
+  font-family: "Lato", "sans-serif";
+  line-height: 32px;
+  letter-spacing: 2px;
+  font-weight: 700;
 }
 
 section {
@@ -388,9 +407,9 @@ header h1 span {
   font-weight: 700;
   color: #FAFFFE;
   display: inline-block;
-  position: absolute;
-  left: 8rem;
-  top: 12rem;
+  position: relative;
+  left: 10%;
+  top: 8rem;
 }
 
 .contactPageHeader {
@@ -469,6 +488,10 @@ header nav ul .currentPage {
 .mainVisitBox .mainVisitImg img {
   -webkit-box-shadow: -1rem 1rem #50E3C2;
           box-shadow: -1rem 1rem #50E3C2;
+  width: 100%;
+  -webkit-clip-path: inset(-1rem);
+          clip-path: inset(-1rem);
+  position: relative;
 }
 
 .galleryContainer {
@@ -582,21 +605,23 @@ header nav ul .currentPage {
 .mainDiscoverContainer .mdText2 p {
   text-align: end;
 }
-.mainDiscoverContainer .mainDiscoverImg img {
+.mainDiscoverContainer .mainDiscoverImg .image1 {
+  top: calc(-2rem - 8px);
+  -webkit-box-shadow: 2rem 2rem #50E3C2;
+          box-shadow: 2rem 2rem #50E3C2;
   width: 100%;
   -webkit-clip-path: inset(-1rem);
           clip-path: inset(-1rem);
   position: relative;
 }
-.mainDiscoverContainer .mainDiscoverImg .image1 {
-  top: calc(-2rem - 8px);
-  -webkit-box-shadow: 2rem 2rem #50E3C2;
-          box-shadow: 2rem 2rem #50E3C2;
-}
 .mainDiscoverContainer .mainDiscoverImg .image2 {
   top: 2rem;
   -webkit-box-shadow: -2rem 2rem #50E3C2;
           box-shadow: -2rem 2rem #50E3C2;
+  width: 100%;
+  -webkit-clip-path: inset(-1rem);
+          clip-path: inset(-1rem);
+  position: relative;
 }
 
 .mainBanner {
@@ -627,6 +652,84 @@ header nav ul .currentPage {
 }
 .freetripContainer p {
   margin-bottom: 10px;
+}
+
+.blogBox {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: reverse;
+      -ms-flex-direction: row-reverse;
+          flex-direction: row-reverse;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+.blogBox .missionBox {
+  width: 370px;
+  min-width: 370px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: start;
+      -ms-flex-align: start;
+          align-items: flex-start;
+}
+.blogBox .missionBox img {
+  width: 100%;
+}
+.blogBox .missionBox .missionText {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  padding-right: 12px;
+}
+.blogBox .missionBox .missionText h5 {
+  padding: 10px 0;
+}
+.blogBox .missionBox .missionText ul {
+  list-style: disc;
+  -webkit-text-decoration: #50E3C2;
+          text-decoration: #50E3C2;
+  padding-left: 1rem;
+  color: #50E3C2;
+}
+.blogBox .missionBox .missionText ul li {
+  padding-left: 5px;
+}
+.blogBox .wrapper {
+  display: block;
+  width: 990px;
+  margin: 0 auto 0 0;
+  margin-right: 15%;
+  position: relative;
+  top: -15rem;
+}
+.blogBox .wrapper .blogPost img {
+  -webkit-box-shadow: 2rem 2rem #50E3C2;
+          box-shadow: 2rem 2rem #50E3C2;
+  width: 100%;
+  -webkit-clip-path: inset(-1rem);
+          clip-path: inset(-1rem);
+  position: relative;
+  width: calc(100% - 1rem);
+  top: -50px;
+}
+.blogBox .wrapper .blogPost .blogText {
+  position: relative;
+  top: -35px;
+  padding: 0 99px 0 calc(.01% * 1600);
+  border-right: 5px solid #50E3C2;
+  border-bottom: 5px solid #50E3C2;
 }
 
 footer {

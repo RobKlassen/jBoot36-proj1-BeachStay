@@ -18,4 +18,8 @@
 @mixin boxshadow ($dropleft, $droptop){
     // filter: drop-shadow($dropleft $droptop 0 $colorGreenishCyan);
     box-shadow: $dropleft $droptop $colorGreenishCyan;
+    width:100%;
+    clip-path: inset(-1rem);
+    position: relative;
+  
 }

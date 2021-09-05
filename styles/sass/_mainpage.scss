@@ -104,12 +104,9 @@
     .mainDiscoverImg{
         // width:50%;
 
-        img{
-            width:100%;
-            clip-path: inset(-1rem);
-            position: relative;
-            
-        }
+        // img{
+  
+        // }
         .image1{
             top:calc(-2rem - 8px);
             @include boxshadow(2rem, 2rem);

@@ -1,0 +1,63 @@
+.blogBox{
+    display:flex;
+    flex-direction:row-reverse;
+    justify-content: space-between;
+    
+    .missionBox{
+        // width:23%;
+        width:370px;
+        min-width:370px;
+        display:flex;
+        flex-direction: column;
+        align-items: flex-start;
+        img{
+            width:100%;
+            // display:block;
+
+        }
+        .missionText{
+            display:flex;
+            flex-direction: column;
+            padding-right:12px;
+            h5{
+                padding:10px 0;
+            }
+            ul{
+                list-style:disc;
+                text-decoration: $colorGreenishCyan;
+                padding-left:1rem;
+                color:$colorGreenishCyan;
+                li{
+                    padding-left:5px;
+                }
+            }
+        }
+
+    }
+    
+    .wrapper{
+        display:block;
+        width:990px;
+        margin:0 auto 0 0;
+        margin-right:15%;
+        position:relative;
+        top:-15rem;
+        .blogPost{
+            img{
+                @include boxshadow(2rem, 2rem);
+                width:calc(100% - 1rem);
+                // matches width to lower section
+                top:-50px;
+            }
+            .blogText{
+                position:relative;
+                top:-35px;
+                // MAKE THIS INTO MARGIN MAYBE??
+                padding:0 99px 0 calc(.01% * 1600);
+                // this math is freaky deaky, but matches the global margin
+                border-right: 5px solid $colorGreenishCyan;
+                border-bottom: 5px solid $colorGreenishCyan;
+            }
+        }
+    }
+}
