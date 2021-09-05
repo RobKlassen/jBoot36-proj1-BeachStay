@@ -90,11 +90,23 @@ h5{
 }
 
 h5{
-    @include fontstyle(30px, $fontBase, 58px, 3.2px, 700);
+    @include fontstyle(1.5rem, $fontBase, 58px, 3.2px, 700);
+}
+
+.contactInfoBox h5{
+    color:$colorBlack;
+}
+
+h6{
+    color: $colorTwilightBlue;
+    @include fontstyle(1rem, $fontBase, 32px, 2px, 700);
 }
 
 p,
-.missionBox .missionText ul li a{
+.missionBox .missionText ul li a,
+.contactInfoBox ul li,
+input,
+textarea{
     color:$colorBlack;
     @include fontstyle(1rem, $fontBase, 32px, 2px, 400);
 }
@@ -122,6 +134,14 @@ section{
     margin:10px 0;
 }
 
+input{
+    border:none;
+    border-bottom: 2px solid $colorGreenishCyan;
+}
+
+textarea{
+    border: 2px solid $colorGreenishCyan;
+}
 
 
 // .mainVisitImg,

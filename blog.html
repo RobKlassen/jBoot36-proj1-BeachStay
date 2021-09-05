@@ -27,8 +27,10 @@
 
 <main>
     <div class="blogBox">
+        <!-- RENAME THIS CLASS -->
 
         <aside class="missionBox">
+            <!-- RENAME THIS CLASS -->
             <img src="./styles/assets/sidebar-image.jpg" alt="">
             <div class="missionText">
                 <h5>Our mission</h5>
@@ -44,8 +46,8 @@
             </div>
         </aside>
         
-        <div class="wrapper">
-            
+
+        <div class="wrapper">  
             <div class="blogPost">
                 <img src="./styles/assets/post-image.jpg" alt="">
                 <div class="blogText">
@@ -62,35 +64,41 @@
                 </div>
             </div>
                 
-            <div class="comments">
-                <h4>Comments:</h4>
-                <div class="customerComment1">
-                    <div class="customerimage">
-                        <img src="" alt="">
+            <div class="blogComments">
+                <h5>Comments:</h5>
+                <div class="customerComment">
+                    <div class="commentImg">
+                        <img src="./styles/assets/comment-image.jpg" alt="">
                     </div>
-                    <div class="customerText">
-                        <h5>Tuesday October 9th, 2019 by Reyansh</h5>
+                    <div class="commentText">
+                        <h6>Tuesday October 9th, 2019 by Reyansh</h6>
                         <p>Fusce vehicula dolor arcu, sit amet blandit dolor mollis nec. Donec viverra eleifend lacus, vitae ullamcorper metus. Sed sollicitudin ipsum quis nunc sollicitudin ultrices. Donec euismod scelerisque ligula. Maecenas eu varius risus..</p>
                     </div>
                 </div>
                 
-                <div class="customerComment2">
-                    <div class="customerimage">
-                        <img src="" alt="">
+                <div class="customerComment">
+                    <div class="commentImg">
+                        <img src="./styles/assets/comment-image2.jpg" alt="">
                     </div>
-                    <div class="customerText">
-                        <h5>Wednesday October 10th, 2019 by Olivia</h5>
+                    <div class="commentText">
+                        <h6>Wednesday October 10th, 2019 by Olivia</h6>
                         <p>Donec viverra eleifend lacus, vitae ullamcorper metus. Sed sollicitudin ipsum quis nunc sollicitudin ultrices. Donec euismod scelerisque ligula.</p>
                     </div>
                 </div>
+
                 <form action="#" method="POST" class="" name="commentForm">
-                    <label for="commentName"></label>
-                    <input type="text" id="name" name="commentName" value="Name">
-                    <label for="commentEmail"></label>
-                    <input type="email" id="commentEmail" name="commentEmail" value="Email address">
-                    <label for="commentMessage"></label>
-                    <input type="textarea" id="commentMessage" name="commentMessage" value="commentMessage">
-                    <button>Post Comment</button>
+                    <div class="commentBox">
+                        <label for="commentName" class="sr-only">Name to appear in comment</label>
+                        <input type="text" id="name" name="commentName" class="commentName" placeholder="Name">
+                        
+                        <label for="commentEmail" class="sr-only">Verification Email Address</label>
+                        <input type="email" id="commentEmail" name="commentEmail" class="commentEmail" placeholder="Email address">
+                    </div>
+                        
+                    <label for="commentMessage" class="sr-only">Your comment here</label>
+                    <textarea id="commentMessage" name="commentMessage" class="commentMessageBox" placeholder="Comment"></textarea>
+
+                    <button class="actionButton">Post Comment</button>
                 </form>
             </div>
         </div>    

@@ -1,5 +1,5 @@
 /*----------SETUP----------*/
-@import url("https://fonts.googleapis.com/css2?family=Lato:wght@300;400;700&family=Playfair+Display+SC:ital,wght@1,900&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Lato:wght@300;400;700&family=Playfair+Display+SC:ital,wght@1,900&family=Josefin+Sans:wght@700&display=swap");
 html {
   line-height: 1.15;
   -ms-text-size-adjust: 100%;
@@ -294,15 +294,31 @@ h5 {
 }
 
 h5 {
-  font-size: 30px;
+  font-size: 1.5rem;
   font-family: "Lato", "sans-serif";
   line-height: 58px;
   letter-spacing: 3.2px;
   font-weight: 700;
 }
 
+.contactInfoBox h5 {
+  color: #232323;
+}
+
+h6 {
+  color: #063974;
+  font-size: 1rem;
+  font-family: "Lato", "sans-serif";
+  line-height: 32px;
+  letter-spacing: 2px;
+  font-weight: 700;
+}
+
 p,
-.missionBox .missionText ul li a {
+.missionBox .missionText ul li a,
+.contactInfoBox ul li,
+input,
+textarea {
   color: #232323;
   font-size: 1rem;
   font-family: "Lato", "sans-serif";
@@ -339,6 +355,15 @@ section {
   background-color: #063974;
   padding: 8px 14px;
   margin: 10px 0;
+}
+
+input {
+  border: none;
+  border-bottom: 2px solid #50E3C2;
+}
+
+textarea {
+  border: 2px solid #50E3C2;
 }
 
 header {
@@ -399,7 +424,17 @@ header h1 span {
 .blogPageHeader {
   background-image: url(./assets/blog-image-1.jpg);
 }
-.blogPageHeader h1 {
+
+.contactPageHeader {
+  background-image: url(./assets/contact-image-1.jpg);
+}
+
+.blogPageHeader,
+.contactPageHeader {
+  max-height: 600px;
+}
+.blogPageHeader h1,
+.contactPageHeader h1 {
   font-size: 87px;
   font-family: "Lato", "sans-serif";
   line-height: 58px;
@@ -410,10 +445,6 @@ header h1 span {
   position: relative;
   left: 10%;
   top: 8rem;
-}
-
-.contactPageHeader {
-  background-image: url(./assets/contact-image-1.jpg);
 }
 
 header nav {
@@ -709,8 +740,7 @@ header nav ul .currentPage {
 .blogBox .wrapper {
   display: block;
   width: 990px;
-  margin: 0 auto 0 0;
-  margin-right: 15%;
+  margin: 0 15% -10rem 0;
   position: relative;
   top: -15rem;
 }
@@ -726,10 +756,133 @@ header nav ul .currentPage {
 }
 .blogBox .wrapper .blogPost .blogText {
   position: relative;
-  top: -35px;
-  padding: 0 99px 0 calc(.01% * 1600);
+  padding: 35px 99px 0 calc(.01% * 1600);
+  margin-top: -35px;
   border-right: 5px solid #50E3C2;
   border-bottom: 5px solid #50E3C2;
+}
+.blogBox .wrapper .blogComments {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: start;
+      -ms-flex-pack: start;
+          justify-content: flex-start;
+  padding: 0 0 0 calc(.01% * 1600);
+}
+.blogBox .wrapper .blogComments h5 {
+  color: #232323;
+  font-size: 1.6rem;
+  font-family: "Josefin Sans", sans-serif;
+  line-height: 32px;
+  letter-spacing: inherit;
+  font-weight: 700;
+  margin: 2.5rem 0;
+}
+.blogBox .wrapper .blogComments .customerComment {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+}
+.blogBox .wrapper .blogComments .customerComment .commentText {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  margin: -0.5rem 2.5rem 5rem 2.5rem;
+}
+.blogBox .wrapper .blogComments .customerComment .commentText h6 {
+  margin-bottom: 8px;
+}
+.blogBox .wrapper .blogComments form {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+}
+.blogBox .wrapper .blogComments form input {
+  padding: 1rem;
+}
+.blogBox .wrapper .blogComments form input::-webkit-input-placeholder, .blogBox .wrapper .blogComments form textarea::-webkit-input-placeholder {
+  color: grey;
+}
+.blogBox .wrapper .blogComments form input::-moz-placeholder, .blogBox .wrapper .blogComments form textarea::-moz-placeholder {
+  color: grey;
+}
+.blogBox .wrapper .blogComments form input:-ms-input-placeholder, .blogBox .wrapper .blogComments form textarea:-ms-input-placeholder {
+  color: grey;
+}
+.blogBox .wrapper .blogComments form input::-ms-input-placeholder, .blogBox .wrapper .blogComments form textarea::-ms-input-placeholder {
+  color: grey;
+}
+.blogBox .wrapper .blogComments form input::placeholder,
+.blogBox .wrapper .blogComments form textarea::placeholder {
+  color: grey;
+}
+.blogBox .wrapper .blogComments form .commentBox {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  padding-bottom: 1rem;
+}
+.blogBox .wrapper .blogComments form .commentBox input[type=text],
+.blogBox .wrapper .blogComments form .commentBox input[type=email] {
+  width: 47%;
+  height: 4rem;
+}
+.blogBox .wrapper .blogComments form textarea {
+  margin: 1.5rem 0;
+  height: 10rem;
+  width: 100%;
+  resize: none;
+  padding: 1rem;
+}
+
+.contactInfoBox {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+}
+.contactInfoBox .contactIconBox {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  width: 100%;
+}
+.contactInfoBox .contactIconBox i {
+  width: 1.3rem;
+  margin-right: 1.5rem;
+  font-size: 1.5rem;
+  color: black;
 }
 
 footer {

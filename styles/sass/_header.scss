@@ -47,6 +47,15 @@ header{
 
 .blogPageHeader{
     background-image: url(./assets/blog-image-1.jpg);
+}
+
+.contactPageHeader{
+    background-image: url(./assets/contact-image-1.jpg);
+}
+    
+.blogPageHeader,
+.contactPageHeader{
+    max-height:600px;
     h1{
         @include fontstyle(87px, $fontBase, 58px, 6.7px, 700);
         color:$colorIceBlue;
@@ -54,10 +63,5 @@ header{
         position:relative;
         left:10%;
         top:8rem;
-
     }
-}
-
-.contactPageHeader{
-    background-image: url(./assets/contact-image-1.jpg);
 }
