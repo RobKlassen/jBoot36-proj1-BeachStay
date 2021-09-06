@@ -1,3 +1,4 @@
+@charset "UTF-8";
 /*----------SETUP----------*/
 @import url("https://fonts.googleapis.com/css2?family=Lato:wght@300;400;700&family=Playfair+Display+SC:ital,wght@1,900&family=Josefin+Sans:wght@700&display=swap");
 html {
@@ -301,7 +302,7 @@ h5 {
   font-weight: 700;
 }
 
-.contactInfoBox h5 {
+.layout2AsideBox h5 {
   color: #232323;
 }
 
@@ -315,8 +316,8 @@ h6 {
 }
 
 p,
-.missionBox .missionText ul li a,
-.contactInfoBox ul li,
+.layout2AsideBox .layout2AsideBoxText ul li a,
+.layout2AsideBoxText ul li,
 input,
 textarea {
   color: #232323;
@@ -327,7 +328,7 @@ textarea {
   font-weight: 400;
 }
 
-.blogMissionLink {
+.layout2AsideBoxLink {
   color: #0C5f4C;
   font-size: 1rem;
   font-family: "Lato", "sans-serif";
@@ -364,6 +365,157 @@ input {
 
 textarea {
   border: 2px solid #50E3C2;
+}
+
+.layout2Container {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: reverse;
+      -ms-flex-direction: row-reverse;
+          flex-direction: row-reverse;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+.layout2Container .layout2AsideBox {
+  width: 370px;
+  min-width: 370px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: start;
+      -ms-flex-align: start;
+          align-items: flex-start;
+  margin-top: -2rem;
+}
+.layout2Container .layout2AsideBox .layout2AsideBoxText {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  padding-right: 12px;
+}
+.layout2Container .wrapper {
+  display: block;
+  max-width: 990px;
+  margin: 0 15% -10rem 0;
+  position: relative;
+}
+.layout2Container .wrapper .layout2MainBox .layout2MainContent {
+  position: relative;
+  padding: 35px 99px 0 calc(.01% * 1600);
+  margin-top: -35px;
+}
+
+form {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  background-color: #FAFFFE;
+}
+form input {
+  padding: 1rem;
+}
+form input::-webkit-input-placeholder, form textarea::-webkit-input-placeholder {
+  color: grey;
+}
+form input::-moz-placeholder, form textarea::-moz-placeholder {
+  color: grey;
+}
+form input:-ms-input-placeholder, form textarea:-ms-input-placeholder {
+  color: grey;
+}
+form input::-ms-input-placeholder, form textarea::-ms-input-placeholder {
+  color: grey;
+}
+form input::placeholder,
+form textarea::placeholder {
+  color: grey;
+}
+form .commentBox {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  padding-bottom: 1rem;
+}
+form .commentBox input[type=text],
+form .commentBox input[type=email] {
+  width: 47%;
+  height: 4rem;
+}
+form textarea {
+  margin: 1.5rem 0;
+  height: 12rem;
+  width: 100%;
+  resize: none;
+  padding: 1rem;
+}
+
+header nav {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+header nav h2 {
+  font-size: 1.73rem;
+  font-family: "Playfair Display SC", serif;
+  line-height: inherit;
+  letter-spacing: inherit;
+  font-weight: 700;
+  text-transform: uppercase;
+  color: #50E3C2;
+}
+header nav ul {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+}
+header nav ul li {
+  font-size: inherit;
+  font-family: "Lato", "sans-serif";
+  line-height: 29px;
+  letter-spacing: 1px;
+  font-weight: 900;
+  text-transform: uppercase;
+  color: #FAFFFE;
+  margin: 25px;
+}
+header nav ul .currentPage {
+  color: #50E3C2;
 }
 
 header {
@@ -445,53 +597,6 @@ header h1 span {
   position: relative;
   left: 10%;
   top: 8rem;
-}
-
-header nav {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-orient: horizontal;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: row;
-          flex-direction: row;
-  -webkit-box-pack: justify;
-      -ms-flex-pack: justify;
-          justify-content: space-between;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-}
-header nav h2 {
-  font-size: 1.73rem;
-  font-family: "Playfair Display SC", serif;
-  line-height: inherit;
-  letter-spacing: inherit;
-  font-weight: 700;
-  text-transform: uppercase;
-  color: #50E3C2;
-}
-header nav ul {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-orient: horizontal;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: row;
-          flex-direction: row;
-}
-header nav ul li {
-  font-size: inherit;
-  font-family: "Lato", "sans-serif";
-  line-height: 29px;
-  letter-spacing: 1px;
-  font-weight: 900;
-  text-transform: uppercase;
-  color: #FAFFFE;
-  margin: 25px;
-}
-header nav ul .currentPage {
-  color: #50E3C2;
 }
 
 .mainVisitBox {
@@ -685,66 +790,26 @@ header nav ul .currentPage {
   margin-bottom: 10px;
 }
 
-.blogBox {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-orient: horizontal;
-  -webkit-box-direction: reverse;
-      -ms-flex-direction: row-reverse;
-          flex-direction: row-reverse;
-  -webkit-box-pack: justify;
-      -ms-flex-pack: justify;
-          justify-content: space-between;
-}
-.blogBox .missionBox {
-  width: 370px;
-  min-width: 370px;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: column;
-          flex-direction: column;
-  -webkit-box-align: start;
-      -ms-flex-align: start;
-          align-items: flex-start;
-}
-.blogBox .missionBox img {
+.layout2AsideBox img {
   width: 100%;
 }
-.blogBox .missionBox .missionText {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: column;
-          flex-direction: column;
-  padding-right: 12px;
-}
-.blogBox .missionBox .missionText h5 {
+.layout2AsideBox .layout2AsideBoxText h5 {
   padding: 10px 0;
 }
-.blogBox .missionBox .missionText ul {
-  list-style: disc;
-  -webkit-text-decoration: #50E3C2;
-          text-decoration: #50E3C2;
-  padding-left: 1rem;
+.layout2AsideBox .layout2AsideBoxText .blogAsideList {
+  list-style: none;
+  padding-left: 0.5rem;
+}
+.layout2AsideBox .layout2AsideBoxText .blogAsideList li::before {
+  content: "•";
+  padding-right: 10px;
   color: #50E3C2;
 }
-.blogBox .missionBox .missionText ul li {
-  padding-left: 5px;
-}
-.blogBox .wrapper {
-  display: block;
-  width: 990px;
-  margin: 0 15% -10rem 0;
-  position: relative;
+
+.wrapper {
   top: -15rem;
 }
-.blogBox .wrapper .blogPost img {
+.wrapper .layout2MainBox img {
   -webkit-box-shadow: 2rem 2rem #50E3C2;
           box-shadow: 2rem 2rem #50E3C2;
   width: 100%;
@@ -754,14 +819,11 @@ header nav ul .currentPage {
   width: calc(100% - 1rem);
   top: -50px;
 }
-.blogBox .wrapper .blogPost .blogText {
-  position: relative;
-  padding: 35px 99px 0 calc(.01% * 1600);
-  margin-top: -35px;
+.wrapper .layout2MainBox .greenBorder {
   border-right: 5px solid #50E3C2;
   border-bottom: 5px solid #50E3C2;
 }
-.blogBox .wrapper .blogComments {
+.wrapper .blogComments {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -774,7 +836,7 @@ header nav ul .currentPage {
           justify-content: flex-start;
   padding: 0 0 0 calc(.01% * 1600);
 }
-.blogBox .wrapper .blogComments h5 {
+.wrapper .blogComments h5 {
   color: #232323;
   font-size: 1.6rem;
   font-family: "Josefin Sans", sans-serif;
@@ -783,7 +845,7 @@ header nav ul .currentPage {
   font-weight: 700;
   margin: 2.5rem 0;
 }
-.blogBox .wrapper .blogComments .customerComment {
+.wrapper .blogComments .customerComment {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -792,7 +854,7 @@ header nav ul .currentPage {
       -ms-flex-direction: row;
           flex-direction: row;
 }
-.blogBox .wrapper .blogComments .customerComment .commentText {
+.wrapper .blogComments .customerComment .commentText {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -802,73 +864,11 @@ header nav ul .currentPage {
           flex-direction: column;
   margin: -0.5rem 2.5rem 5rem 2.5rem;
 }
-.blogBox .wrapper .blogComments .customerComment .commentText h6 {
+.wrapper .blogComments .customerComment .commentText h6 {
   margin-bottom: 8px;
 }
-.blogBox .wrapper .blogComments form {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: column;
-          flex-direction: column;
-}
-.blogBox .wrapper .blogComments form input {
-  padding: 1rem;
-}
-.blogBox .wrapper .blogComments form input::-webkit-input-placeholder, .blogBox .wrapper .blogComments form textarea::-webkit-input-placeholder {
-  color: grey;
-}
-.blogBox .wrapper .blogComments form input::-moz-placeholder, .blogBox .wrapper .blogComments form textarea::-moz-placeholder {
-  color: grey;
-}
-.blogBox .wrapper .blogComments form input:-ms-input-placeholder, .blogBox .wrapper .blogComments form textarea:-ms-input-placeholder {
-  color: grey;
-}
-.blogBox .wrapper .blogComments form input::-ms-input-placeholder, .blogBox .wrapper .blogComments form textarea::-ms-input-placeholder {
-  color: grey;
-}
-.blogBox .wrapper .blogComments form input::placeholder,
-.blogBox .wrapper .blogComments form textarea::placeholder {
-  color: grey;
-}
-.blogBox .wrapper .blogComments form .commentBox {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-orient: horizontal;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: row;
-          flex-direction: row;
-  -webkit-box-pack: justify;
-      -ms-flex-pack: justify;
-          justify-content: space-between;
-  padding-bottom: 1rem;
-}
-.blogBox .wrapper .blogComments form .commentBox input[type=text],
-.blogBox .wrapper .blogComments form .commentBox input[type=email] {
-  width: 47%;
-  height: 4rem;
-}
-.blogBox .wrapper .blogComments form textarea {
-  margin: 1.5rem 0;
-  height: 10rem;
-  width: 100%;
-  resize: none;
-  padding: 1rem;
-}
 
-.contactInfoBox {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: column;
-          flex-direction: column;
-}
-.contactInfoBox .contactIconBox {
+.contactIconBox {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -878,11 +878,21 @@ header nav ul .currentPage {
           flex-direction: row;
   width: 100%;
 }
-.contactInfoBox .contactIconBox i {
+.contactIconBox i {
   width: 1.3rem;
   margin-right: 1.5rem;
   font-size: 1.5rem;
   color: black;
+}
+
+.contactFormBorder {
+  -webkit-box-shadow: 4rem 4rem #50E3C2;
+          box-shadow: 4rem 4rem #50E3C2;
+  margin-bottom: 4rem;
+}
+.contactFormBorder form {
+  -webkit-box-shadow: 0px 0px 0px 3rem #FAFFFE;
+          box-shadow: 0px 0px 0px 3rem #FAFFFE;
 }
 
 footer {

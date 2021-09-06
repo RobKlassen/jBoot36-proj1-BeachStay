@@ -93,7 +93,7 @@ h5{
     @include fontstyle(1.5rem, $fontBase, 58px, 3.2px, 700);
 }
 
-.contactInfoBox h5{
+.layout2AsideBox h5{
     color:$colorBlack;
 }
 
@@ -103,15 +103,15 @@ h6{
 }
 
 p,
-.missionBox .missionText ul li a,
-.contactInfoBox ul li,
+.layout2AsideBox .layout2AsideBoxText ul li a,
+.layout2AsideBoxText ul li,
 input,
 textarea{
     color:$colorBlack;
     @include fontstyle(1rem, $fontBase, 32px, 2px, 400);
 }
 
-.blogMissionLink{
+.layout2AsideBoxLink{
     color:$colorSpruce;
     @include fontstyle(1rem, $fontBase, 32px, 2px, 700);
 }

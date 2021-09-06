@@ -1,0 +1,37 @@
+//GENERAL FORM STYLE, NOT PAGE SPECIFIC
+
+form{
+    display:flex;
+    flex-direction: column;
+    background-color: $colorIceBlue;
+
+    input{
+        padding:1rem;
+    }
+
+    input::placeholder,
+    textarea::placeholder{
+        color:grey;
+    }
+
+    .commentBox{
+        display:flex;
+        flex-direction: row;
+        justify-content: space-between;
+        padding-bottom: 1rem;
+        input[type=text],
+        input[type=email]{
+            width:47%;
+            height:4rem;
+        }                        
+    }
+
+    textarea{
+        margin:1.5rem 0;
+        height:12rem;
+        width:100%;
+        // line-height: 1px;
+        resize:none;
+        padding:1rem;
+    }
+}

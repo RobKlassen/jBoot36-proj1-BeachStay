@@ -27,11 +27,9 @@
 
 
 <main>
-    <div class="blogBox">
-        <!-- RENAME THIS CLASS -->
-        <aside class="missionBox">
-            <!-- RENAME THIS CLASS -->
-            <div class="contactInfoBox">
+    <div class="layout2Container">
+        <aside class="layout2AsideBox">
+            <div class="layout2AsideBoxText">
                 <div class="contactIconBox">
                     <i class="fab fa-facebook-f"></i>
                     <i class="fab fa-instagram"></i>
@@ -50,19 +48,26 @@
         </aside>
 
         <div class="wrapper">
-            <div class="blogPost">
-                <div class="blogText">
+            <div class="layout2MainBox">
+                <div class="layout2MainContent">
+                    <div class="contactFormBorder">
+                        <form action="#" method="POST" class="" name="commentForm">
+                            <div class="commentBox">
+                                <label for="commentName" class="sr-only">Name to appear in comment</label>
+                                <input type="text" id="name" name="commentName" class="commentName" placeholder="Name">
+                                
+                                <label for="commentEmail" class="sr-only">Verification Email Address</label>
+                                <input type="email" id="commentEmail" name="commentEmail" class="commentEmail" placeholder="Email address">
+                            </div>
+                            
+                            <label for="commentMessage" class="sr-only">Your comment here</label>
+                            <textarea id="commentMessage" name="commentMessage" class="commentMessageBox" placeholder="Comment"></textarea>
+                            
+                            <button class="actionButton">Submit</button>
+                        </form>
+                    </div>
 
-                    <form action="#" method="POST" class="" name="contactUsForm">
-                        <label for="name"></label>
-                        <input type="text" id="name" name="username" value="Name">
-                        <label for="email"></label>
-                        <input type="email" id="email" name="email" value="Email address">
-                        <label for="message"></label>
-                        <input type="textarea" id="message" name="message" value="message">
-                        <button>Submit</button>
-                        
-                    </form>
+
                 </div>
             </div>
         </div>      

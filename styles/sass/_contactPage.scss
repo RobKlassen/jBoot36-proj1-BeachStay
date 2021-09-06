@@ -1,112 +1,21 @@
-.contactInfoBox{
+.contactIconBox{
     display:flex;
-    flex-direction: column;
+    flex-direction: row;
+    width:100%;
 
-    .contactIconBox{
-        display:flex;
-        flex-direction: row;
-        width:100%;
-
-        i{
-            width:1.3rem;
-            margin-right:1.5rem;
-            font-size:1.5rem;
-            color:black;
-        }
+    i{
+        width:1.3rem;
+        margin-right:1.5rem;
+        font-size:1.5rem;
+        color:black;
     }
 }
 
+.contactFormBorder {
+    box-shadow: 4rem 4rem $colorGreenishCyan;
+    margin-bottom:4rem;
+    form{
+        box-shadow: 0px 0px 0px 3rem $colorIceBlue;
+    }
+}
 
-
-
-// .blogBox{
-//     display:flex;
-//     flex-direction:row-reverse;
-//     justify-content: space-between;
-    
-//     .wrapper{
-//         display:block;
-//         width:990px;
-//         margin:0 15% -10rem 0;
-//         // margin-right:15%;
-//         position:relative;
-//         top:-15rem;
-//         .blogPost{
-//             img{
-//                 @include boxshadow(2rem, 2rem);
-//                 width:calc(100% - 1rem);
-//                 // matches width to lower section
-//                 top:-50px;
-//             }
-//             .blogText{
-//                 position:relative;
-//                 // top:-35px;
-//                 // MAKE THIS INTO MARGIN MAYBE??
-//                 padding:35px 99px 0 calc(.01% * 1600);
-//                 margin-top:-35px;
-//                 // this math is freaky deaky, but matches the global margin
-//                 border-right: 5px solid $colorGreenishCyan;
-//                 border-bottom: 5px solid $colorGreenishCyan;
-//             }
-//         }
-//         .blogComments{
-//             display:flex;
-//             flex-direction: column;
-//             justify-content: flex-start;
-//             padding:0 0 0 calc(.01% * 1600);
-
-//             h5{
-//                 color:$colorBlack;
-//                 @include fontstyle(1.6rem, $fontCommentHeader, 32px, inherit, 700);
-//                 margin:2.5rem 0;
-//             }
-
-//             .customerComment{
-//                 display:flex;
-//                 flex-direction: row;
-//                 .commentImg{
-
-//                 }
-//                 .commentText{
-//                     display:flex;
-//                     flex-direction: column;
-//                     margin: -0.5rem 2.5rem 5rem 2.5rem;
-//                     h6{
-//                         margin-bottom: 8px;
-//                     }
-//                 }
-//             }
-
-//             form{
-//                 display:flex;
-//                 flex-direction: column;
-//                 input{
-//                     padding:1rem;
-//                 }
-//                 input::placeholder,
-//                 textarea::placeholder{
-//                     color:grey;
-//                 }
-//                 .commentBox{
-//                     display:flex;
-//                     flex-direction: row;
-//                     justify-content: space-between;
-//                     padding-bottom: 1rem;
-//                     input[type=text],
-//                     input[type=email]{
-//                         width:47%;
-//                         height:4rem;
-//                     }                        
-//                 }
-//                 textarea{
-//                     margin:1.5rem 0;
-//                     height:10rem;
-//                     width:100%;
-//                     // line-height: 1px;
-//                     resize:none;
-//                     padding:1rem;
-//                 }
-//             }
-//         }
-//     }
-// }

@@ -1,5 +1,3 @@
-
-
 header{
     @include backgroundspecs(no-repeat, auto, top center, 90vh, 840px, 600px);
     margin-bottom:7rem;
@@ -42,8 +40,6 @@ header{
         }
     }
 }
-
-// @mixin fontstyle ($fontSize, $fontFamily, $fontLineHeight, $fontLetterSpacing, $fontWeight){
 
 .blogPageHeader{
     background-image: url(./assets/blog-image-1.jpg);

@@ -1,0 +1,41 @@
+//THIS PARTIAL DETERMINES BASIC LAYOUT FOR CONTACT AND BLOG
+
+.layout2Container{
+    display:flex;
+    flex-direction:row-reverse;
+    justify-content: space-between;
+    
+    .layout2AsideBox{
+        // width:23%;
+        width:370px;
+        min-width:370px;
+        display:flex;
+        flex-direction: column;
+        align-items: flex-start;
+        margin-top: -2rem;
+
+        .layout2AsideBoxText{
+            display:flex;
+            flex-direction: column;
+            padding-right:12px;
+        }
+    }
+    
+    .wrapper{
+        // width:77%;
+        display:block;
+        max-width:990px;
+        // PROBLEMS MIGHT BE HERE????
+        margin:0 15% -10rem 0;
+        position:relative;
+
+        .layout2MainBox{
+
+            .layout2MainContent{
+                position:relative;
+                padding:35px 99px 0 calc(.01% * 1600);
+                margin-top:-35px;
+            }
+        }
+    }
+}
