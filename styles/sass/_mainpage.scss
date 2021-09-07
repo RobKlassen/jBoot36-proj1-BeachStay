@@ -24,6 +24,7 @@
 .galleryContainer{
     display:flex;
     flex-direction: row;
+    justify-content: space-between;
     background-color: $colorLightLightBlue;
     padding:5% 10%;
 
@@ -50,8 +51,10 @@
         display:flex;
         flex-direction: row;
         margin-bottom:2rem;
+        @include hovereffect2;
 
         span{
+            
             color:$colorIceBlue;
             font-size:30px;
             .fa-circle{
@@ -136,6 +139,171 @@
     }
 }
 
+@media (max-width:1220px) {
+    .mainVisitBox{
+        flex-direction: column;
+        .mainVisitText{
+            width:100%;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            p{
+                text-align: justify;
+                // text-justify: newspaper ;
+            }
+            .actionButton{
+                align-self: flex-end;
+            }
+        }
+        .mainVisitImg{
+            position:relative;
+            width:50%;
+            align-self: flex-start;
+            overflow: hidden;
+            height:200px;
+            box-shadow: 1rem 1rem $colorGreenishCyan;
+            // @include boxshadow(2rem, 2rem);
+            img{
+                position:absolute;
+                bottom:0;
+                left:0;
+            }
+        }
+    }
+    .galleryContainer{
+        .mainGalImg2{
+            display:none;
+        }
+        .mainGalImgBox{
+            width:47%;
+        }
+    }
+    .forwards{
+        flex-direction: column;
+        article{
+            width:100%;
+            p{
+                text-align: justify;
+            }
+        }
+    }
+    .mainDiscoverContainer{
+        .mainDiscoverBox{
+            width:480px;
+        }
+    }
+
+}
+
+@media (max-width:1040px) {
+    .mainDiscoverContainer{
+        flex-direction: column;
+
+        .mainDiscoverImg{
+            align-self: flex-end;
+
+            .image1{
+                // object-fit: cover;
+            }
+            .image2{
+                @include boxshadow(2rem, 2rem);
+                top:0;
+                // object-fit: cover;
+            }
+        }
+        .mainDiscoverBox{
+            width:80%;
+            padding:1% 10%;
+
+            .mainDiscoverText{
+                padding:0;
+            }
+
+            .mdText2,
+            .mdText1{
+                justify-content: flex-start;
+                align-items: flex-start;
+                // padding-left:20%;
+                p{
+                    text-align: left;
+                }
+            }
+        }        
+        & :nth-child(1){order: 1;}
+        & :nth-child(2){order: 2;}
+        & :nth-child(4){order: 3;}
+        & :nth-child(3){order: 4;}
+    }
+    .freetripContainer{
+        margin-top: -40px;
+        margin-bottom: -40px;
+    }
+}
+
+@media (max-width:600px){
+
+    .mainVisitBox{
+        display:flex;
+        flex-direction: column;
+        align-items: center;
+        .mainVisitImg{
+            align-self: center;
+            width:125%;
+            box-shadow: none;
+            top:35px;
+            img{
+                top:-86%;
+                left:0;
+                box-shadow: none;
+                
+            }
+
+        }
+    }
+    .forwards{
+        article{
+            flex-direction: column;
+            align-items:center;
+            .mainArticleText{
+                h3{
+                    align-self: center;
+                }
+            }
+        }
+    }
+    .mainDiscoverContainer{
+        align-content: center;
+        .mainDiscoverImg{
+            width:100%;
+            .image1,
+            .image2{
+                box-shadow: none;
+                // @include boxshadow(0, 0);
+            }
+            .image1{
+                margin-bottom: calc(-2rem - 8px);
+                // lol undoes something way above I need to fix this later
+            }
+        }
+        .mainDiscoverBox{
+            align-self: center;
+            .mainDiscoverText,
+            .mdText2,
+            .mdText1{
+                text-align: center;
+                align-items: center;
+                h4{
+                    margin:0;
+                }
+                p{
+                    text-align: center;
+                    margin:10px 0;
+                }
+            }
+        }
+    }
+}
+    
 
 // fa-users / h3 is Community
 // fa-file / h3 is Blog

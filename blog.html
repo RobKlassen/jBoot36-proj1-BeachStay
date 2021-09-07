@@ -4,6 +4,7 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://kit.fontawesome.com/fd2248e09b.js" crossorigin="anonymous"></script>
     <link rel="stylesheet" href="styles/style.css">
     <title>Blog</title>
 </head>
@@ -13,15 +14,25 @@
     <div class="wrapper">
         <nav>
             <h2>Beachstays</h2>
-            <ul>
-                <li>Home</li>
+            <ul class="mainNavMenu">
+                <li><a href="index.html">Home</a></li>
                 <li>About</li>
-                <li class="currentPage">Blog</li>
-                <li>Contact</li>
+                <li class="currentPage"><a href="./blog.html">Blog</a></li>
+                <li><a href="./contact.html">Contact</a></li>
+            </ul>
+
+            <label for="menuButton" class="menuToggle"><i class="fas fa-bars"></i></label>
+            <input type="checkbox" id="menuButton" name="menu">
+            
+            <ul class="dropdownNavMenu">
+                <li><a href="index.html">Home</a></li>
+                <li>About</li>
+                <li class="currentPage"><a href="./blog.html">Blog</a></li>
+                <li><a href="./contact.html">Contact</a></li>
             </ul>
         </nav>
     </div>
-        <h1>Blog</h1>
+    <h1>Blog</h1>
 </header>
 
 

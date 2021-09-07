@@ -21,5 +21,29 @@
     width:100%;
     clip-path: inset(-1rem);
     position: relative;
-  
+ 
+}
+
+// @mixin fixedmenueffect (){
+//     filter
+// }
+
+@mixin hovereffect (){
+    background: radial-gradient(ellipse, rgba(12,95,76,.25), rgba(0,0,0,0));
+    filter: drop-shadow(0 0 5px $colorBlack);
+    transition-property: color, filter;
+    transition-duration: 0.33s, 0.75s;
+    &:hover{
+        color:fuchsia;
+        filter: drop-shadow(0 0 5px fuchsia);
+    }
+}
+
+@mixin hovereffect2 (){
+    transition-property: color, filter;
+    transition-duration: 0.33s, 0.75s;
+    &:hover{
+        color:fuchsia;
+        filter: drop-shadow(0 0 5px fuchsia);
+    }
 }

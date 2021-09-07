@@ -132,6 +132,7 @@ section{
     background-color: $colorTwilightBlue;
     padding: 8px 14px;
     margin:10px 0;
+    @include hovereffect2();
 }
 
 input{

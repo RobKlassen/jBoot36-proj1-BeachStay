@@ -7,16 +7,21 @@ header{
         flex-direction: row;
         justify-content: space-between;
         align-items: center;
+        overflow: hidden;
+        
         h2{
             @include fontstyle(1.73rem, $fontFancy,inherit,inherit,700);
             text-transform: uppercase;
             color:$colorGreenishCyan;
+            transition: all 0.25s;
+            @include hovereffect();
         }
         ul{
             display:flex;
             flex-direction: row;
 
             li{
+                @include hovereffect;
                 @include fontstyle(inherit,$fontBase,29px,1px,900);
                 text-transform: uppercase;
                 color: $colorIceBlue;
@@ -24,6 +29,93 @@ header{
             }
             .currentPage{
                 color:$colorGreenishCyan;
+            }
+        }
+        label{
+            display:none;
+            // display:none;
+            visibility: none;
+            .fas{
+                position:fixed;
+                visibility:visible;
+                display:block;
+                right: 22px;
+                top: 30px;
+                color:$colorGreenishCyan;
+                font-size:40px;
+                opacity: 0;
+                z-index:20;
+            } 
+        }
+        .dropdownNavMenu{
+            display:flex;
+            flex-direction: column;
+            align-items: flex-end;
+            visibility: none;
+            position:fixed;
+            opacity:0;
+            top: 80px;
+            right: -100px;
+            transition: all .25s ease;
+            z-index:20;
+            li{
+                @include hovereffect();
+                margin:0;
+                padding:0;
+            }
+        }
+        input[type="checkbox"]{
+            display:none;
+        }
+    }
+}
+
+@media (max-width:1220px){
+    header{
+        nav{
+            flex-direction: column;
+            h2{
+                position:relative;
+                left:0;
+            }
+            .mainNavMenu{
+                position:relative;
+                top:0;
+                left:0;
+                transition: all 0.25s ease;
+                opacity:100%;
+                height:100%;
+
+            }
+            label{
+                display:block;
+                visibility: visible;
+            }
+        }
+    }
+}
+
+@media (max-width:600px){
+    header{
+        nav{
+            align-items: flex-start;
+            h2{
+                position:relative;
+                margin-top:30px;
+                left:0;
+            }
+            .mainNavMenu{
+                opacity:0;
+                height:0;
+            }
+            label .fas{
+                opacity: 100%;
+                @include hovereffect();
+            }
+            input[type="checkbox"]:checked + .dropdownNavMenu{
+
+                opacity: 100%;
+                right: 20px;
             }
         }
     }

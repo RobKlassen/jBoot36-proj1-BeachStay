@@ -61,3 +61,84 @@ header{
         top:8rem;
     }
 }
+
+// @mixin backgroundspecs ($brRepeat, $brSize, $brPos, $brHeight, $brMaxH, $brMinH){
+
+@media (max-width:1220px){
+    
+    header,
+    .mainPageHeader{
+        .headerContainer{
+            img{
+                width:480px;
+                bottom:38.2px;
+                transition:all 0.5s ease;
+            }
+
+            h1{
+                bottom: 42%;
+                left: 16.5%;
+                font-size:5vw;
+                
+                span{
+                    font-size:9vw;
+                }
+            }
+        }
+    }
+    .blogPageHeader,
+    .contactPageHeader{
+        display:flex;
+        flex-direction: column;
+        align-items: center;
+        margin-bottom:0;
+        h1{
+            // transition: all 0.25s ease;
+            position:relative;
+            top:0;
+            left:0;
+        }
+    }
+}
+
+@media (max-width:600px){
+    header,
+    .mainPageHeader{
+        height:200px;
+        margin-bottom: 40px;
+        .headerContainer{
+            position:absolute;
+            top:70px;
+            img{
+                width:100%;
+                top:135px;
+                object-fit: cover;
+            }
+
+            h1{
+                top: 130px;
+                font-size: 30px;
+                
+                span{
+                    // font-size:40px;
+                }
+            }
+        }
+    }
+    .blogPageHeader,
+    .contactPageHeader{
+        display:flex;
+        flex-direction: column;
+        align-items: center;
+        // height:200px;
+        min-height:400px;
+        h1{
+            width:100%;
+            position:absolute;
+            top: 110px;
+            line-height:65px;
+            font-size:15vw;
+            text-align: center;
+        }
+    }
+}
