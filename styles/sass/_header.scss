@@ -101,6 +101,13 @@ header{
     }
 }
 
+@media (max-width: 1040px){
+    .blogPageHeader,
+    .contactPageHeader{
+        background-color: $colorLightLightBlue;
+    }
+}
+
 @media (max-width:600px){
     header,
     .mainPageHeader{
@@ -139,6 +146,8 @@ header{
             line-height:65px;
             font-size:15vw;
             text-align: center;
+            z-index:10;
+            filter: drop-shadow(0 0 10px black);
         }
     }
 }

@@ -35,6 +35,11 @@
             border-right: 5px solid $colorGreenishCyan;
             border-bottom: 5px solid $colorGreenishCyan;
         }
+        .layout2MainContent {
+            p{
+                padding: 0px 0 20px 0;            
+            }
+        }
     }
     .blogComments{
         display:flex;
@@ -63,3 +68,90 @@
         }
     }
 }
+
+@media (max-width:1220px){
+    .wrapper{
+        .blogComments{
+            width:135%;
+            // padding:0;
+        }
+        .commentForm{
+            max-width:100%;
+        }
+    }
+}
+
+@media (max-width:1040px){
+    .layout2Container{
+        background-color: $colorLightLightBlue;
+        .layout2AsideBox{
+            background-color: $colorIceBlue;
+        }
+        .wrapper{
+            .layout2MainBox{
+                border: solid 7px $colorGreenishCyan;
+                background-color: $colorIceBlue;
+                width:100%;
+                img{
+                    top:0;
+                    width:100%;
+                    box-shadow: none;
+                }
+                .greenBorder{
+                    border:none;
+                    p{
+                        text-align: justify;
+                    }
+                }       
+            }
+            .blogComments{
+                width:100%;
+                padding:0;
+                form{
+                    background-color: $colorLightLightBlue;                   
+                }
+            }
+        }
+    }
+}
+
+@media (max-width:600px){
+    .layout2Container{
+        .wrapper{
+            .layout2MainBox{
+                border:none;
+                .greenBorder {
+                }
+            }
+            .blogComments{
+                width:100%;
+                // justify-content: center;
+                align-items: center;
+                padding:0;
+                margin:0;
+                .customerComment{
+                    flex-direction: column;
+                    // justify-content: center;
+                    align-items: center;
+                    .commentImg{
+                        padding:10px;
+                        img{
+                            border-radius: 50%;
+                        }
+                    }
+                    .commentText{
+                        align-items: center;
+                        margin: 1rem 13% 3rem 13%;
+                        p{
+                            text-align: justify;
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+
+
+
+

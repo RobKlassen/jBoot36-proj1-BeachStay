@@ -1,11 +1,13 @@
 //GENERAL FORM STYLE, NOT PAGE SPECIFIC
 
 form{
+    // @include hovereffect2;
     display:flex;
     flex-direction: column;
     background-color: $colorIceBlue;
 
     input{
+        @include hovereffect2;
         padding:1rem;
     }
 
@@ -27,6 +29,7 @@ form{
     }
 
     textarea{
+        @include hovereffect2;
         margin:1.5rem 0;
         height:12rem;
         width:100%;
@@ -34,4 +37,17 @@ form{
         resize:none;
         padding:1rem;
     }
+}
+
+
+@media (max-width:1220px){
+
+}
+
+@media (max-width:1040px){
+
+}
+
+@media (max-width:600px){
+
 }

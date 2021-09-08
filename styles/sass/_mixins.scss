@@ -29,7 +29,7 @@
 // }
 
 @mixin hovereffect (){
-    background: radial-gradient(ellipse, rgba(12,95,76,.25), rgba(0,0,0,0));
+    background: radial-gradient(ellipse, rgba(12, 95, 76, 0.35), rgba(0,0,0,0));
     filter: drop-shadow(0 0 5px $colorBlack);
     transition-property: color, filter;
     transition-duration: 0.33s, 0.75s;

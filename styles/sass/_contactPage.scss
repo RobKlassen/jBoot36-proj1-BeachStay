@@ -19,3 +19,36 @@
     }
 }
 
+@media (max-width:1220px){
+    .contactIconBox{
+        margin-top:135px;
+    }
+    .contactFormBorder{
+        form{
+            margin-top:135px;
+        }
+    }
+}
+
+@media (max-width:1040px){
+
+    .contactIconBox{
+        justify-content: space-evenly;
+        margin-top:35px;
+        i{
+            margin:0;
+        }
+    }
+    .contactFormBorder{
+        box-shadow: none;
+        form{
+            margin-top:0px;
+            margin-bottom:-50px;
+            box-shadow: none;
+        }
+    }
+}
+
+@media (max-width:600px){
+
+}
