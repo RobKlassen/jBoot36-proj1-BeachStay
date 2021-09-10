@@ -8,6 +8,8 @@ form{
     input{
         @include hovereffect2;
         padding:1rem;
+        border:none;
+        border-bottom: 2px solid $colorGreenishCyan;
     }
 
     input::placeholder,
@@ -32,21 +34,23 @@ form{
         margin:1.5rem 0;
         height:12rem;
         width:100%;
-        // line-height: 1px;
         resize:none;
         padding:1rem;
     }
 }
 
-
-@media (max-width:1220px){
-
-}
-
-@media (max-width:1040px){
-
-}
-
 @media (max-width:600px){
-
+    form{
+        input{
+            border: 2px solid $colorGreenishCyan;
+            margin-top:20px;
+        }
+        .commentBox{
+            flex-direction: column;
+            input[type=text],
+            input[type=email]{
+                width:100%;
+            }
+        }  
+    }
 }

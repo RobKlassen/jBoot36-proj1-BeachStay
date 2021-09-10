@@ -1,6 +1,3 @@
-// @mixin fontstyle ($fontSize, $fontFamily, $fontLineHeight, $fontLetterSpacing, $fontWeight){
-//@mixin boxshadow ($dropleft, $droptop){
-
 .mainVisitBox{
     height:100%;
     display:flex;
@@ -32,11 +29,11 @@
         width:calc(100%/3);
 
         img{
+            @include hovereffect2;
             width:100%;
             height:100%;
         }
     }
-
     .mainGalImg2{
         margin:0 2%;
     }
@@ -61,13 +58,12 @@
                 color:$colorGreenishCyan;
             }
         }
-
         .mainArticleText{
             display:flex;
             flex-direction: column;
             width:90%;
             padding-left:3%;
-            // align-items: flex-start;
+
             h3{
                 margin:0;
             }
@@ -105,11 +101,6 @@
         }
     }
     .mainDiscoverImg{
-        // width:50%;
-
-        // img{
-  
-        // }
         .image1{
             top:calc(-2rem - 8px);
             @include boxshadow(2rem, 2rem);
@@ -134,6 +125,7 @@
     text-align: center;
     width:80%;
     margin:0 auto;
+
     p{
         margin-bottom: 10px;
     }
@@ -142,6 +134,7 @@
 @media (max-width:1220px) {
     .mainVisitBox{
         flex-direction: column;
+
         .mainVisitText{
             width:100%;
             display: flex;
@@ -149,7 +142,6 @@
             align-items: center;
             p{
                 text-align: justify;
-                // text-justify: newspaper ;
             }
             .actionButton{
                 align-self: flex-end;
@@ -162,7 +154,7 @@
             overflow: hidden;
             height:200px;
             box-shadow: 1rem 1rem $colorGreenishCyan;
-            // @include boxshadow(2rem, 2rem);
+
             img{
                 position:absolute;
                 bottom:0;
@@ -180,8 +172,10 @@
     }
     .forwards{
         flex-direction: column;
+
         article{
             width:100%;
+
             p{
                 text-align: justify;
             }
@@ -202,13 +196,9 @@
         .mainDiscoverImg{
             align-self: flex-end;
 
-            .image1{
-                // object-fit: cover;
-            }
             .image2{
                 @include boxshadow(2rem, 2rem);
                 top:0;
-                // object-fit: cover;
             }
         }
         .mainDiscoverBox{
@@ -223,7 +213,6 @@
             .mdText1{
                 justify-content: flex-start;
                 align-items: flex-start;
-                // padding-left:20%;
                 p{
                     text-align: left;
                 }
@@ -246,24 +235,25 @@
         display:flex;
         flex-direction: column;
         align-items: center;
+
         .mainVisitImg{
             align-self: center;
             width:125%;
             box-shadow: none;
             top:35px;
+
             img{
                 top:-86%;
                 left:0;
-                box-shadow: none;
-                
+                box-shadow: none;  
             }
-
         }
     }
     .forwards{
         article{
             flex-direction: column;
             align-items:center;
+
             .mainArticleText{
                 h3{
                     align-self: center;
@@ -273,25 +263,29 @@
     }
     .mainDiscoverContainer{
         align-content: center;
+
         .mainDiscoverImg{
             width:100%;
+
             .image1,
             .image2{
                 box-shadow: none;
-                // @include boxshadow(0, 0);
             }
             .image1{
                 margin-bottom: calc(-2rem - 8px);
                 // lol undoes something way above I need to fix this later
+                // ...I forget what it fixes, I should've fixed it earlier... oops. 
             }
         }
         .mainDiscoverBox{
             align-self: center;
+            
             .mainDiscoverText,
             .mdText2,
             .mdText1{
                 text-align: center;
                 align-items: center;
+
                 h4{
                     margin:0;
                 }
@@ -303,19 +297,3 @@
         }
     }
 }
-    
-
-// fa-users / h3 is Community
-// fa-file / h3 is Blog
-// fa-phone / h3 is Get in Touch
-
-
-// h3::before{
-//     font-family: "Font Awesome 5 Free"; font-weight: 900; content: "\f0c0"
-// }
-
-
-// <span class="fa-stack fa-4x">
-//   <i class="fa fa-circle fa-stack-2x icon-background"></i>
-//   <i class="fa fa-lock fa-stack-1x"></i>
-// </span>

@@ -16,7 +16,6 @@
 }
 
 @mixin boxshadow ($dropleft, $droptop){
-    // filter: drop-shadow($dropleft $droptop 0 $colorGreenishCyan);
     box-shadow: $dropleft $droptop $colorGreenishCyan;
     width:100%;
     clip-path: inset(-1rem);
@@ -24,16 +23,13 @@
  
 }
 
-// @mixin fixedmenueffect (){
-//     filter
-// }
-
 @mixin hovereffect (){
     background: radial-gradient(ellipse, rgba(12, 95, 76, 0.35), rgba(0,0,0,0));
     filter: drop-shadow(0 0 5px $colorBlack);
     transition-property: color, filter;
     transition-duration: 0.33s, 0.75s;
-    &:hover{
+    &:hover,
+    &:focus{
         color:fuchsia;
         filter: drop-shadow(0 0 5px fuchsia);
     }
@@ -42,7 +38,8 @@
 @mixin hovereffect2 (){
     transition-property: color, filter;
     transition-duration: 0.33s, 0.75s;
-    &:hover{
+    &:hover,
+    &:focus{
         color:fuchsia;
         filter: drop-shadow(0 0 5px fuchsia);
     }

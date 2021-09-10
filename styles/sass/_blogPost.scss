@@ -5,13 +5,17 @@
     .layout2AsideBoxText{
         h5{
             padding:10px 0;
+            color:$colorTwilightBlue;
+        }
+        a{
+            @include hovereffect2;
         }
 
         .blogAsideList{
             list-style:none;
             padding-left:.5rem;
+            @include hovereffect2;
             li{
-                // padding-left:5px;
                 &::before{
                     content:'•';
                     padding-right:10px;
@@ -24,6 +28,7 @@
 
 .wrapper{
     top:-15rem;
+
     .layout2MainBox{
         img{
             @include boxshadow(2rem, 2rem);
@@ -36,6 +41,14 @@
             border-bottom: 5px solid $colorGreenishCyan;
         }
         .layout2MainContent {
+            .twentyfirth{
+                color:$colorTwilightBlue;
+                font-style: italic;
+
+                span{
+                    font-weight:900;
+                }
+            }
             p{
                 padding: 0px 0 20px 0;            
             }
@@ -61,6 +74,7 @@
                 display:flex;
                 flex-direction: column;
                 margin: -0.5rem 2.5rem 5rem 2.5rem;
+
                 h6{
                     margin-bottom: 8px;
                 }
@@ -73,7 +87,6 @@
     .wrapper{
         .blogComments{
             width:135%;
-            // padding:0;
         }
         .commentForm{
             max-width:100%;
@@ -84,6 +97,7 @@
 @media (max-width:1040px){
     .layout2Container{
         background-color: $colorLightLightBlue;
+
         .layout2AsideBox{
             background-color: $colorIceBlue;
         }
@@ -92,6 +106,7 @@
                 border: solid 7px $colorGreenishCyan;
                 background-color: $colorIceBlue;
                 width:100%;
+
                 img{
                     top:0;
                     width:100%;
@@ -99,6 +114,7 @@
                 }
                 .greenBorder{
                     border:none;
+
                     p{
                         text-align: justify;
                     }
@@ -107,6 +123,7 @@
             .blogComments{
                 width:100%;
                 padding:0;
+
                 form{
                     background-color: $colorLightLightBlue;                   
                 }
@@ -120,21 +137,20 @@
         .wrapper{
             .layout2MainBox{
                 border:none;
-                .greenBorder {
-                }
             }
             .blogComments{
                 width:100%;
-                // justify-content: center;
                 align-items: center;
                 padding:0;
                 margin:0;
+
                 .customerComment{
                     flex-direction: column;
-                    // justify-content: center;
                     align-items: center;
+
                     .commentImg{
                         padding:10px;
+                        
                         img{
                             border-radius: 50%;
                         }

@@ -6,7 +6,6 @@
     justify-content: space-between;
     
     .layout2AsideBox{
-        // width:23%;
         width:370px;
         min-width:370px;
         display:flex;
@@ -22,10 +21,8 @@
     }
     
     .wrapper{
-        // width:77%;
         display:block;
         max-width:990px;
-        // PROBLEMS MIGHT BE HERE????
         margin:0 15% -10rem 0;
         position:relative;
 
@@ -57,12 +54,12 @@
     .layout2Container{
         flex-direction: column;
         align-items: center;
+
         .layout2AsideBox{
             flex-direction: column-reverse;
             height:100%;
             position:relative;
             display:block;
-
             margin:0;
             margin-top:-300px;
             border-top: solid 8px $colorGreenishCyan;
@@ -70,13 +67,13 @@
             border-left: solid 8px $colorGreenishCyan;
             border-bottom: solid 8px $colorIceBlue;
             top:8px;
-            img{
-            }
+
             .layout2AsideBoxText{
                 padding-right:0;
                 padding-bottom:20px;
                 height:100%;
                 align-items: center;
+
                 p{
                     text-align: center;
                 }
@@ -100,14 +97,17 @@
 }
 
 @media (max-width:600px){
-    main{
+    .layout2main{
         background-color: $colorLightLightBlue;
+
         .layout2Container{
             position: relative;
             top: 200px;
             width:100%;
+
             .wrapper{
                 width:100%;
+                
                 .layout2MainBox{
                     .layout2MainContent{
                         margin: 0;

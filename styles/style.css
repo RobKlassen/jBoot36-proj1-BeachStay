@@ -363,15 +363,10 @@ section {
   -webkit-transition-duration: 0.33s, 0.75s;
           transition-duration: 0.33s, 0.75s;
 }
-.actionButton:hover {
+.actionButton:hover, .actionButton:focus {
   color: fuchsia;
   -webkit-filter: drop-shadow(0 0 5px fuchsia);
           filter: drop-shadow(0 0 5px fuchsia);
-}
-
-input {
-  border: none;
-  border-bottom: 2px solid #50E3C2;
 }
 
 textarea {
@@ -493,18 +488,18 @@ textarea {
   }
 }
 @media (max-width: 600px) {
-  main {
+  .layout2main {
     background-color: #D2F9F1;
   }
-  main .layout2Container {
+  .layout2main .layout2Container {
     position: relative;
     top: 200px;
     width: 100%;
   }
-  main .layout2Container .wrapper {
+  .layout2main .layout2Container .wrapper {
     width: 100%;
   }
-  main .layout2Container .wrapper .layout2MainBox .layout2MainContent {
+  .layout2main .layout2Container .wrapper .layout2MainBox .layout2MainContent {
     margin: 0;
   }
 }
@@ -526,8 +521,10 @@ form input {
   -webkit-transition-duration: 0.33s, 0.75s;
           transition-duration: 0.33s, 0.75s;
   padding: 1rem;
+  border: none;
+  border-bottom: 2px solid #50E3C2;
 }
-form input:hover {
+form input:hover, form input:focus {
   color: fuchsia;
   -webkit-filter: drop-shadow(0 0 5px fuchsia);
           filter: drop-shadow(0 0 5px fuchsia);
@@ -579,12 +576,28 @@ form textarea {
   resize: none;
   padding: 1rem;
 }
-form textarea:hover {
+form textarea:hover, form textarea:focus {
   color: fuchsia;
   -webkit-filter: drop-shadow(0 0 5px fuchsia);
           filter: drop-shadow(0 0 5px fuchsia);
 }
 
+@media (max-width: 600px) {
+  form input {
+    border: 2px solid #50E3C2;
+    margin-top: 20px;
+  }
+  form .commentBox {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+  }
+  form .commentBox input[type=text],
+form .commentBox input[type=email] {
+    width: 100%;
+  }
+}
 header nav {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -621,7 +634,7 @@ header nav h2 {
   -webkit-transition-duration: 0.33s, 0.75s;
           transition-duration: 0.33s, 0.75s;
 }
-header nav h2:hover {
+header nav h2:hover, header nav h2:focus {
   color: fuchsia;
   -webkit-filter: drop-shadow(0 0 5px fuchsia);
           filter: drop-shadow(0 0 5px fuchsia);
@@ -636,6 +649,14 @@ header nav ul {
           flex-direction: row;
 }
 header nav ul li {
+  font-size: inherit;
+  font-family: "Lato", "sans-serif";
+  line-height: 29px;
+  letter-spacing: 1px;
+  font-weight: 900;
+  text-transform: uppercase;
+  color: #FAFFFE;
+  margin: 25px;
   background: radial-gradient(ellipse, rgba(12, 95, 76, 0.35), rgba(0, 0, 0, 0));
   -webkit-filter: drop-shadow(0 0 5px #232323);
           filter: drop-shadow(0 0 5px #232323);
@@ -645,16 +666,8 @@ header nav ul li {
   transition-property: color, filter, -webkit-filter;
   -webkit-transition-duration: 0.33s, 0.75s;
           transition-duration: 0.33s, 0.75s;
-  font-size: inherit;
-  font-family: "Lato", "sans-serif";
-  line-height: 29px;
-  letter-spacing: 1px;
-  font-weight: 900;
-  text-transform: uppercase;
-  color: #FAFFFE;
-  margin: 25px;
 }
-header nav ul li:hover {
+header nav ul li:hover, header nav ul li:focus {
   color: fuchsia;
   -webkit-filter: drop-shadow(0 0 5px fuchsia);
           filter: drop-shadow(0 0 5px fuchsia);
@@ -710,7 +723,7 @@ header nav .dropdownNavMenu li {
   margin: 0;
   padding: 0;
 }
-header nav .dropdownNavMenu li:hover {
+header nav .dropdownNavMenu li:hover, header nav .dropdownNavMenu li:focus {
   color: fuchsia;
   -webkit-filter: drop-shadow(0 0 5px fuchsia);
           filter: drop-shadow(0 0 5px fuchsia);
@@ -771,7 +784,7 @@ header nav input[type=checkbox] {
     -webkit-transition-duration: 0.33s, 0.75s;
             transition-duration: 0.33s, 0.75s;
   }
-  header nav label .fas:hover {
+  header nav label .fas:hover, header nav label .fas:focus {
     color: fuchsia;
     -webkit-filter: drop-shadow(0 0 5px fuchsia);
             filter: drop-shadow(0 0 5px fuchsia);
@@ -911,13 +924,15 @@ header h1 span {
 @media (max-width: 600px) {
   header,
 .mainPageHeader {
-    height: 200px;
+    min-height: 120vw;
+    max-height: 25vw;
+    margin-bottom: 32px;
     margin-bottom: 40px;
   }
   header .headerContainer,
 .mainPageHeader .headerContainer {
     position: absolute;
-    top: 70px;
+    bottom: -33px;
   }
   header .headerContainer img,
 .mainPageHeader .headerContainer img {
@@ -931,6 +946,7 @@ header h1 span {
     top: 130px;
     font-size: 30px;
   }
+
   .blogPageHeader,
 .contactPageHeader {
     display: -webkit-box;
@@ -1007,8 +1023,19 @@ header h1 span {
   width: calc(100%/3);
 }
 .galleryContainer .mainGalImgBox img {
+  -webkit-transition-property: color, -webkit-filter;
+  transition-property: color, -webkit-filter;
+  transition-property: color, filter;
+  transition-property: color, filter, -webkit-filter;
+  -webkit-transition-duration: 0.33s, 0.75s;
+          transition-duration: 0.33s, 0.75s;
   width: 100%;
   height: 100%;
+}
+.galleryContainer .mainGalImgBox img:hover, .galleryContainer .mainGalImgBox img:focus {
+  color: fuchsia;
+  -webkit-filter: drop-shadow(0 0 5px fuchsia);
+          filter: drop-shadow(0 0 5px fuchsia);
 }
 .galleryContainer .mainGalImg2 {
   margin: 0 2%;
@@ -1038,7 +1065,7 @@ header h1 span {
   -webkit-transition-duration: 0.33s, 0.75s;
           transition-duration: 0.33s, 0.75s;
 }
-.forwards article:hover {
+.forwards article:hover, .forwards article:focus {
   color: fuchsia;
   -webkit-filter: drop-shadow(0 0 5px fuchsia);
           filter: drop-shadow(0 0 5px fuchsia);
@@ -1382,10 +1409,35 @@ header h1 span {
 }
 .layout2AsideBox .layout2AsideBoxText h5 {
   padding: 10px 0;
+  color: #063974;
+}
+.layout2AsideBox .layout2AsideBoxText a {
+  -webkit-transition-property: color, -webkit-filter;
+  transition-property: color, -webkit-filter;
+  transition-property: color, filter;
+  transition-property: color, filter, -webkit-filter;
+  -webkit-transition-duration: 0.33s, 0.75s;
+          transition-duration: 0.33s, 0.75s;
+}
+.layout2AsideBox .layout2AsideBoxText a:hover, .layout2AsideBox .layout2AsideBoxText a:focus {
+  color: fuchsia;
+  -webkit-filter: drop-shadow(0 0 5px fuchsia);
+          filter: drop-shadow(0 0 5px fuchsia);
 }
 .layout2AsideBox .layout2AsideBoxText .blogAsideList {
   list-style: none;
   padding-left: 0.5rem;
+  -webkit-transition-property: color, -webkit-filter;
+  transition-property: color, -webkit-filter;
+  transition-property: color, filter;
+  transition-property: color, filter, -webkit-filter;
+  -webkit-transition-duration: 0.33s, 0.75s;
+          transition-duration: 0.33s, 0.75s;
+}
+.layout2AsideBox .layout2AsideBoxText .blogAsideList:hover, .layout2AsideBox .layout2AsideBoxText .blogAsideList:focus {
+  color: fuchsia;
+  -webkit-filter: drop-shadow(0 0 5px fuchsia);
+          filter: drop-shadow(0 0 5px fuchsia);
 }
 .layout2AsideBox .layout2AsideBoxText .blogAsideList li::before {
   content: "•";
@@ -1409,6 +1461,13 @@ header h1 span {
 .wrapper .layout2MainBox .greenBorder {
   border-right: 5px solid #50E3C2;
   border-bottom: 5px solid #50E3C2;
+}
+.wrapper .layout2MainBox .layout2MainContent .twentyfirth {
+  color: #063974;
+  font-style: italic;
+}
+.wrapper .layout2MainBox .layout2MainContent .twentyfirth span {
+  font-weight: 900;
 }
 .wrapper .layout2MainBox .layout2MainContent p {
   padding: 0px 0 20px 0;
@@ -1546,10 +1605,21 @@ header h1 span {
   width: 100%;
 }
 .contactIconBox i {
+  -webkit-transition-property: color, -webkit-filter;
+  transition-property: color, -webkit-filter;
+  transition-property: color, filter;
+  transition-property: color, filter, -webkit-filter;
+  -webkit-transition-duration: 0.33s, 0.75s;
+          transition-duration: 0.33s, 0.75s;
   width: 1.3rem;
   margin-right: 1.5rem;
   font-size: 1.5rem;
   color: black;
+}
+.contactIconBox i:hover, .contactIconBox i:focus {
+  color: fuchsia;
+  -webkit-filter: drop-shadow(0 0 5px fuchsia);
+          filter: drop-shadow(0 0 5px fuchsia);
 }
 
 .contactFormBorder {
