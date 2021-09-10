@@ -17,7 +17,8 @@ form{
         color:grey;
     }
 
-    .commentBox{
+    .commentBox,
+    .contactBox{
         display:flex;
         flex-direction: row;
         justify-content: space-between;
@@ -45,7 +46,8 @@ form{
             border: 2px solid $colorGreenishCyan;
             margin-top:20px;
         }
-        .commentBox{
+        .commentBox,
+        .contactBox{
             flex-direction: column;
             input[type=text],
             input[type=email]{
