@@ -9,58 +9,75 @@
 //
 
 
-const getCurrentSource = function (img){
-    return img.currentSrc
-}
+// const getCurrentSource = function (img){
+//     return img.currentSrc
+// }
 
-const enlargeImage = function(){
-    console.log("hello you've clicked an image");
-}
+// const enlargeImage = function(){
+//     console.log("triggered enlarge function");
+// }
 
-const overlayImg = document.querySelectorAll('img');
+let overlayImg = document.querySelectorAll('img');
+const body = document.querySelector('body');
+const newOverlay = document.createElement('div');
 
-for (image of overlayImg){
-
-    image.addEventListener('click', function(e){
-        e.preventDefault();
-        console.log(image);
-        
-        let imageSource = getCurrentSource(image);
-        console.log(imageSource);
-
-        const body = document.querySelector('body');
-
-        const newOverlay = document.createElement('div');
-
+for (i=0; i<overlayImg.length; i++){
+    let image = overlayImg[i];
+    
+    overlayImg[i].addEventListener('click', function(){
+        let imageSource = image.currentSrc;
         newOverlay.innerHTML = `<img src="${imageSource}"></img>` 
-        
-        newOverlay.style.width = "100px";
-        newOverlay.style.height = "100px";
-        
-        console.log(newOverlay);
-        
+        newOverlay.classList.add("overlayJSClass");
         body.appendChild(newOverlay);
-        
-        // const newImage = document.createElement('img');
-        // newOverlay.appendChild(newImage);
-        // newImage.style.width = "100px";
-        // newImage.style.height = "100px";
-        enlargeImage(image);
-        // console.log("hello, you've clicked the image");
-    })
+    });
+    newOverlay.addEventListener('click', function(){
+        newOverlay.innerHTML = ``;
+        this.classList.remove("overlayJSClass");
+        // body.removeChild(newOverlay);
+    });
 }
 
 
 
+
+
+
+
+
+
+
+
+
+// for (image of overlayImg){
+//     console.log(image);
+
+//     image.addEventListener('click', function(e){
+//         e.preventDefault();
+//         console.log(image);
+        
+//         let imageSource = getCurrentSource(image);
+//         console.log(imageSource);
+
+//         const body = document.querySelector('body');
+
+//         const newOverlay = document.createElement('div');
+
+//         newOverlay.innerHTML = `<img src="${imageSource}"></img>` 
+        
+//         newOverlay.style.width = "100px";
+//         newOverlay.style.height = "100px";
+        
+//         // console.log(newOverlay);
+        
+//         body.appendChild(newOverlay);
+//         enlargeImage(image);
+//     });
+// }
 
 
 
 // const overylayBox
-
 // const overlayBackground
-
-
-
 // const imgClick = function(){
 
 // }

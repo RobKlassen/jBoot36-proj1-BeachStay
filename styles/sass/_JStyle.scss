@@ -1,0 +1,19 @@
+.overlayJSClass{
+    width:100vw;
+    height:100vh;
+    position:fixed;
+    top:0;
+    left:0;
+    z-index: 200;
+    color:#50E3C2;
+    background-color: rgba(80, 227, 194, 0.5);
+    display:flex;
+    justify-content: center;
+    align-items: center;
+
+    img{
+        width:50vw;
+        filter: drop-shadow(0 0 40px fuchsia);
+        border:solid fuchsia 5px;
+    }
+}
