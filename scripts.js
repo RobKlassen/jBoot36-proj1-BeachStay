@@ -26,58 +26,12 @@ for (i=0; i<overlayImg.length; i++){
     
     overlayImg[i].addEventListener('click', function(){
         let imageSource = image.currentSrc;
-        newOverlay.innerHTML = `<img src="${imageSource}"></img>` 
+        newOverlay.innerHTML = `<img src="${imageSource}">` 
         newOverlay.classList.add("overlayJSClass");
         body.appendChild(newOverlay);
     });
     newOverlay.addEventListener('click', function(){
         newOverlay.innerHTML = ``;
         this.classList.remove("overlayJSClass");
-        // body.removeChild(newOverlay);
     });
 }
-
-
-
-
-
-
-
-
-
-
-
-
-// for (image of overlayImg){
-//     console.log(image);
-
-//     image.addEventListener('click', function(e){
-//         e.preventDefault();
-//         console.log(image);
-        
-//         let imageSource = getCurrentSource(image);
-//         console.log(imageSource);
-
-//         const body = document.querySelector('body');
-
-//         const newOverlay = document.createElement('div');
-
-//         newOverlay.innerHTML = `<img src="${imageSource}"></img>` 
-        
-//         newOverlay.style.width = "100px";
-//         newOverlay.style.height = "100px";
-        
-//         // console.log(newOverlay);
-        
-//         body.appendChild(newOverlay);
-//         enlargeImage(image);
-//     });
-// }
-
-
-
-// const overylayBox
-// const overlayBackground
-// const imgClick = function(){
-
-// }

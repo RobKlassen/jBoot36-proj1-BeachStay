@@ -1699,7 +1699,7 @@ footer p {
           align-items: center;
 }
 .overlayJSClass img {
-  width: 50vw;
+  height: 40vw;
   -webkit-filter: drop-shadow(0 0 40px fuchsia);
           filter: drop-shadow(0 0 40px fuchsia);
   border: solid fuchsia 5px;
