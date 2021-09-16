@@ -17,3 +17,18 @@
         border:solid fuchsia 5px;
     }
 }
+
+.mouseoverJSClassParent{
+    padding-top:0;
+    padding-bottom:0;
+    .mainGalImgBox{
+        width:calc(100%/4);
+        height:100%;
+        img{
+            object-fit: cover;
+        }
+    }
+    .mouseoverJSClassChild{
+        width:40%;
+    }
+}
