@@ -26,9 +26,17 @@
     background-color: $colorLightLightBlue;
     padding:5% 10%;
 
+    // THIS IS JS RELATED
+    height:500px;
+    // THIS IS JS RELATED
+
+
     .mainGalImgBox{
         width:calc(100%/3);
-
+        // THIS IS JS RELATED
+        transition: all 0.25s ease;
+        // THIS IS JS RELATED   
+        
         img{
             @include hovereffect2;
             width:100%;

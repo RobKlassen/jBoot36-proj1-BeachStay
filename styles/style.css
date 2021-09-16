@@ -1027,9 +1027,12 @@ header h1 span {
           align-items: center;
   background-color: #D2F9F1;
   padding: 5% 10%;
+  height: 500px;
 }
 .galleryContainer .mainGalImgBox {
   width: calc(100%/3);
+  -webkit-transition: all 0.25s ease;
+  transition: all 0.25s ease;
 }
 .galleryContainer .mainGalImgBox img {
   -webkit-transition-property: color, -webkit-filter;
@@ -1711,10 +1714,11 @@ footer p {
 .mouseoverJSClassParent {
   padding-top: 0;
   padding-bottom: 0;
+  -webkit-transition: all 0.25s ease;
+  transition: all 0.25s ease;
 }
 .mouseoverJSClassParent .mainGalImgBox {
   width: calc(100%/4);
-  height: 100%;
 }
 .mouseoverJSClassParent .mainGalImgBox img {
   -o-object-fit: cover;
@@ -1722,4 +1726,5 @@ footer p {
 }
 .mouseoverJSClassParent .mouseoverJSClassChild {
   width: 40%;
+  height: 100%;
 }
